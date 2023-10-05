@@ -1,3 +1,12 @@
+# Wht I am Learning
+
+- selenium
+- playing with large csv to excels, data manupulation
+- ai chatbots, gradio, llms, hugging face
+- deploying with vllm
+
+
+
 # DevOps Requirements
 
 - Analyzing the business/technical requirement documents
