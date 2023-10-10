@@ -4,6 +4,7 @@
 - playing with large csv to excels, data manupulation
 - ai chatbots, gradio, llms, hugging face
 - deploying with vllm
+- created a chatbot api endpoint with pygmallion , flask
 
 
 
