@@ -57,6 +57,7 @@
 Feel free to add any additional content or specifics to these notes, and if you have any further questions or need more details on a particular section, please let me know.
 
 https://betterprogramming.pub/speed-up-llm-inference-83653aa24c47 -->
+https://www.youtube.com/watch?v=klTvEwg3oJ4&ab_channel=Fireship
 In summary, the text provides optimization strategies for machine learning models:
 
 1. **Precision Reduction**:
