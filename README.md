@@ -55,3 +55,29 @@
 - The video concludes by noting that innovative applications continue to emerge as large language models evolve.
 
 Feel free to add any additional content or specifics to these notes, and if you have any further questions or need more details on a particular section, please let me know.
+
+https://betterprogramming.pub/speed-up-llm-inference-83653aa24c47 -->
+In summary, the text provides optimization strategies for machine learning models:
+
+1. **Precision Reduction**:
+   - Using float16 or bfloat16 precision can speed up the model by approximately 20%.
+   - It also reduces memory consumption by a factor of 2.
+
+2. **Quantization**:
+   - Employ 8-bit or 4-bit quantization to reduce memory usage by 2x or 3x.
+   - Ideal for small devices with limited memory.
+   - Note that quantization can degrade prediction quality.
+
+3. **Fine-Tuning with Adapters**:
+   - Utilize fine-tuning methods like LoRA and QLoRA to enhance prediction accuracy on your specific data.
+   - Effective when combined with quantization.
+
+4. **Tensor Parallelism**:
+   - Implement tensor parallelism for faster inference on multiple GPUs, especially for running large models.
+
+5. **Use Specialized Libraries**:
+   - Consider using libraries designed for Large Language Model (LLM) inference and serving.
+   - Examples include Text Generation Inference, DeepSpeed, or vLLM.
+   - These libraries come with various optimization techniques, such as tensor parallelism, quantization, continuous batching, optimized CUDA kernels, and more.
+
+These strategies aim to enhance the efficiency and performance of machine learning models while addressing concerns like memory consumption and prediction quality.
