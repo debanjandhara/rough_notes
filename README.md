@@ -1,6 +1,6 @@
 # Wht I am Learning
 
-- selenium
+- selenium.
 - playing with large csv to excels, data manupulation
 - ai chatbots, gradio, llms, hugging face
 - deploying with vllm
