@@ -82,3 +82,12 @@ In summary, the text provides optimization strategies for machine learning model
    - These libraries come with various optimization techniques, such as tensor parallelism, quantization, continuous batching, optimized CUDA kernels, and more.
 
 These strategies aim to enhance the efficiency and performance of machine learning models while addressing concerns like memory consumption and prediction quality.
+
+
+----- NETWROK ----
+
+> > Difference b/t NAT and PAT
+
+In NAT, Private IP addresses are translated into the public IP address. In PAT, Private IP addresses are translated into the public IP address via Port number.
+go to instance >> security >> inbound >> allow all (to test at first), then stepwise allow 80 and special ports (8080 - Django, 5000 - Flask) to get access from outside
+always browse by public ip of the instance, not the given instance ipv4 dns name (FQDN). Map this AWS ipv4 dns name and public ip in the registered dns server.
