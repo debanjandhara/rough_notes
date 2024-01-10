@@ -5,6 +5,17 @@
 - ai chatbots, gradio, llms, hugging face
 - deploying with vllm
 - created a chatbot api endpoint with pygmallion , flask
+- scaling flask with worker threads, gunzip
+- rate limiting and asyncio in flassk
+- queeuing using redis layer
+- multiinstance scale using nginx, and using 3rd part nginx tool, for proper load balancing
+- nginx, config files, and sites available... with wokrer thread concept, and multiple port config for same application and default time out set for connection...
+- node backend scaling using pm2, react hosting with serve and express code, and scaling with pm2 with express
+- pm2 ecosystem.cjs, config.. for fork and cluster mode - and with restart
+- git https authentication --> use token
+- git ssh use .. learn about keys.. merge, conflict, stash, branch, checkout.. revert back
+- multiple file server with worker threads, scaling, and restart
+- working with opennebula
 
 
 
