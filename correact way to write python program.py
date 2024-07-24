@@ -1,3 +1,5 @@
+# Check the proper defination of FastAPI Code here : https://github.com/chrisK824/fastapi-sso-example
+
 require 'colorize'
 require 'sinatra/base'
 
