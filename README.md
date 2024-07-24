@@ -17,6 +17,12 @@
 - multiple file server with worker threads, scaling, and restart
 - working with opennebula
 
+- ## Installation
+
+* Create a python virtual environment: `python3.11 -m venv venv`
+* Activate the virtual environment: `source venv/bin/activate`
+* Install dependencies: `python3.11 -m pip install -r requirements.txt`
+
 
 
 # DevOps Requirements
