@@ -17,6 +17,12 @@
 - multiple file server with worker threads, scaling, and restart
 - working with opennebula
 
+- ## Installation
+
+* Create a python virtual environment: `python3.11 -m venv venv`
+* Activate the virtual environment: `source venv/bin/activate`
+* Install dependencies: `python3.11 -m pip install -r requirements.txt`
+
 
 
 # DevOps Requirements
@@ -36,6 +42,17 @@
 - Understanding the software development lifecycle and software development common practices (code reviews, unit testing, etc.)
 - Good understanding of SQL performance tuning techniques including query plan understanding and management, SQL tracing, DB stats, indexing techniques, etc., highly preferred
 - Good in managing and resolving problems on a live production system.
+
+- Requirements :
+Bachelor’s in computer science or related discipline; or equivalent work experience
+4-7 years of experience
+Data structures and algorithms, object-oriented programming, databases, SQL, web programming, design patterns, SOLID principles, cloud technologies (AWS, Azure, etc.)
+4+ years’ web development, Java frameworks (Spring/Quarkus)
+3+ years’ REST/gRPC services, micro-services
+3+ years’ unit testing, mocking frameworks, automation frameworks.
+DevOps mindset – 3+ years’ experience in CI/CD, SDLC environment, implemented exception handling, logging, monitoring, performance measurement, operational metrics knowledge.
+3+ years’ experience working in agile methodologies (Scrum, Kanban)
+Strong communication, partnership, teamwork, and influencing skills required
 
 
 
