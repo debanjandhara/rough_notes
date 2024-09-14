@@ -128,7 +128,7 @@ always browse by public ip of the instance, not the given instance ipv4 dns name
 - Network : networking router, etc.. firewall,
 - DBMS : Normalisation schema, joins, indexing, sql planner, layers of data flow.. how to play with big datas... basic sql queries... orms
 - why which programming language, frameworks,... benefits.. advantages
-
+- system design , microservices api...
 -------------------------------------------------------------------------------------------
 
 
