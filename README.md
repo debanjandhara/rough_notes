@@ -7,7 +7,7 @@
 - created a chatbot api endpoint with pygmallion , flask
 - scaling flask with worker threads, gunzip
 - rate limiting and asyncio in flassk
-- queeuing using redis layer
+- queeuing using redis layer, Kafka, RabbitMQ
 - multiinstance scale using nginx, and using 3rd part nginx tool, for proper load balancing
 - nginx, config files, and sites available... with wokrer thread concept, and multiple port config for same application and default time out set for connection...
 - node backend scaling using pm2, react hosting with serve and express code, and scaling with pm2 with express
@@ -122,7 +122,12 @@ go to instance >> security >> inbound >> allow all (to test at first), then step
 always browse by public ip of the instance, not the given instance ipv4 dns name (FQDN). Map this AWS ipv4 dns name and public ip in the registered dns server.
 
 
-
+## What More to learn, take notes of...
+- OS : Linux file strustures, permission, special commands - systemctl, act, vi, vim ,nano, cp -r, chmod -r, chown -r , update, upgrade , autoremove, purge all cache, lsof, net tools, docker commands,  (notes)
+- OS THeory COncepts : registers, memeory alloc, deadlock, paging, page fault,
+- Network : networking router, etc.. firewall,
+- DBMS : Normalisation schema, joins, indexing, sql planner, layers of data flow.. how to play with big datas... basic sql queries... orms
+- why which programming language, frameworks,... benefits.. advantages
 
 -------------------------------------------------------------------------------------------
 
