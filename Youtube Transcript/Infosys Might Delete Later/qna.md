@@ -30,11 +30,14 @@ The grandmaster is wondering how many placements of these two pieces are possibl
 
 ## Constraints  
 
-- \(1 \leq x_{l1} \leq 8\)  
-- \(x_{l1} \leq x_{r1} \leq 8\)  
-- \(1 \leq y_{l1} \leq 8\)  
-- \(y_{l1} \leq y_{r1} \leq 8\)  
-- \(1 \leq x_{l2} \leq 8\)  
-- \(x_{l2} \leq x_{r2} \leq 8\)  
-- \(1 \leq y_{l2} \leq 8\)  
-- \(y_{l2} \leq y_{r2} \leq 8\)  
+## Constraints  
+
+- 1 ≤ x_l1 ≤ 8  
+- x_l1 ≤ x_r1 ≤ 8  
+- 1 ≤ y_l1 ≤ 8  
+- y_l1 ≤ y_r1 ≤ 8  
+- 1 ≤ x_l2 ≤ 8  
+- x_l2 ≤ x_r2 ≤ 8  
+- 1 ≤ y_l2 ≤ 8  
+- y_l2 ≤ y_r2 ≤ 8  
+
