@@ -1,7 +1,3 @@
-This problem is about maximizing enjoyment while traversing a graph in `k` steps, considering constraints on movement. It is well-suited for dynamic programming (DP) on graphs. Here's how to approach the problem step-by-step:
-
----
-
 ### **Step 1: Problem Breakdown**
 
 1. **Graph Representation**:
@@ -15,7 +11,7 @@ This problem is about maximizing enjoyment while traversing a graph in `k` steps
    - Maximize the total enjoyment over `k` days starting from any node.
 
 4. **Constraints**:
-   - Large input size (`n` up to \(10^5\), `m` up to \(10^5\)).
+   - Large input size (`n` up to $10^5$, `m` up to $10^5$).
    - Graph traversal needs to be efficient.
 
 ---
@@ -52,7 +48,7 @@ This problem is similar to:
    - Iterate over days `2` to `k` and update `dp` values using the transition formula.
 
 4. **Optimization**:
-   - Use a sliding array `dp_prev` and `dp_curr` to reduce space complexity from \(O(n \cdot k)\) to \(O(n)\).
+   - Use a sliding array `dp_prev` and `dp_curr` to reduce space complexity from $O(n \cdot k)$ to $O(n)$.
 
 5. **Result**:
    - Return the maximum value in `dp[node][k]` for all nodes `node`.
@@ -62,7 +58,7 @@ This problem is similar to:
 ### **Step 4: Edge Cases**
 
 1. Disconnected Graph: By constraint, the graph is connected.
-2. Minimum size: \(n = 1, k = 1\).
+2. Minimum size: $n = 1, k = 1$.
 3. Large `k`: Ensure DP efficiently handles up to `k = 100`.
 4. High enjoyment values: Validate against integer overflow (if applicable).
 
@@ -113,17 +109,9 @@ print(get_max_enjoyment(n, m, k, edges, enjoyment_grid))  # Output: 20
 ### **Step 6: Complexity Analysis**
 
 1. **Time Complexity**:
-   - Building adjacency list: \(O(m)\).
-   - DP computation: \(O(k \cdot (n + m))\) since for each day, we iterate over all nodes and neighbors.
+   - Building adjacency list: $O(m)$.
+   - DP computation: $O(k \cdot (n + m))$ since for each day, we iterate over all nodes and neighbors.
 
 2. **Space Complexity**:
-   - Adjacency list: \(O(n + m)\).
-   - DP arrays: \(O(n)\).
-
----
-
-### **Step 7: Additional Optimization**
-
-If `k` is very large, explore mathematical properties (e.g., periodicity or graph diameter) to reduce redundant computation.
-
-Let me know if you'd like me to extend this!
+   - Adjacency list: $O(n + m)$.
+   - DP arrays: $O(n)$.
