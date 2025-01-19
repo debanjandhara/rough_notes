@@ -104,14 +104,3 @@ enjoyment_grid = [[1, 10], [10, 1]]
 print(get_max_enjoyment(n, m, k, edges, enjoyment_grid))  # Output: 20
 ```
 
----
-
-### **Step 6: Complexity Analysis**
-
-1. **Time Complexity**:
-   - Building adjacency list: $O(m)$.
-   - DP computation: $O(k \cdot (n + m))$ since for each day, we iterate over all nodes and neighbors.
-
-2. **Space Complexity**:
-   - Adjacency list: $O(n + m)$.
-   - DP arrays: $O(n)$.
