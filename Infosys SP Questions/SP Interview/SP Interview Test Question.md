@@ -74,11 +74,11 @@ No smaller `y` will satisfy `C(3, y) = 2`.
 
 We can observe that the recursive cost function
 
-$C(x, y)=
+$$C(x, y)=
 \begin{cases}
 x, & \text{if } x < y,\\[1mm]
 C\left(\lfloor x/y \rfloor, y\right) + (x \bmod y), & \text{otherwise},
-\end{cases}$
+\end{cases}$$
 
 is exactly the sum of the digits of $x$ when written in base $y$. (In base‐\(y\) notation, if
 $x = a_k y^k + a_{k-1} y^{k-1} + \cdots + a_1 y + a_0,$
