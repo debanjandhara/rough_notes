@@ -1,4 +1,4 @@
-# 🌟 Introducing **Aiko** – Your AI Social Media Growth Partner 🤖✨  
+# 🌟 Introducing **Aiko** 🤖✨  
 ## *The AI Influencer Who Never Sleeps – Built to Grow Your Brand 24/7*  
 
 ---
