@@ -85,6 +85,11 @@ Now, let's talk security! Given how these systems interact with the physical wor
     *   **Supply Chain Complexity:** Vulnerabilities can be introduced at any point from design to manufacturing to deployment.
 *   **Common Weaknesses / Vulnerability Categories (Q3 & Q10 Comparison):**
 
+*   ![image](https://github.com/user-attachments/assets/e4bf6903-9e09-47e9-b1fc-090fb7916658)
+*   ![image](https://github.com/user-attachments/assets/4cc9beae-e7f5-40df-becb-9e9d8fb5c9ce)
+
+
+
     | Vulnerability Type        | Description                                                                 | Examples                                                                     | Contrast Point                                                                 |
     | :------------------------ | :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
     | **1. Weak Authentication/Credentials** | Using default, easily guessable, or hardcoded passwords/keys.             | "admin"/"password", using device serial number as key.                       | *Configuration/User Error:* Often easy to fix but relies on user/deployer action. |
