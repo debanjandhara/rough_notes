@@ -85,8 +85,8 @@ Now, let's talk security! Given how these systems interact with the physical wor
     *   **Supply Chain Complexity:** Vulnerabilities can be introduced at any point from design to manufacturing to deployment.
 *   **Common Weaknesses / Vulnerability Categories (Q3 & Q10 Comparison):**
 
-*   ![image](https://github.com/user-attachments/assets/e4bf6903-9e09-47e9-b1fc-090fb7916658)
-*   ![image](https://github.com/user-attachments/assets/4cc9beae-e7f5-40df-becb-9e9d8fb5c9ce)
+ ![image](https://github.com/user-attachments/assets/e4bf6903-9e09-47e9-b1fc-090fb7916658)
+ ![image](https://github.com/user-attachments/assets/4cc9beae-e7f5-40df-becb-9e9d8fb5c9ce)
 
 
 
@@ -685,10 +685,10 @@ This section covers the absolute essentials – the fundamental techniques that 
     *   **Plaintext Block:** `P = 11001010`
     *   **Step 1: Initial Key Addition (XOR):** Combine the plaintext block with the key using XOR (⊕).
         ```
-          11001010 (P)
+           11001010 (P)
         ⊕ 10101010 (Key)
         -----------------
-          01100000 (Result 1)
+           01100000 (Result 1)
         ```
     *   **Step 2: Substitution (Simple Example):** Let's define a simple substitution: swap the first 4 bits with the last 4 bits.
         `0110 0000` becomes `0000 0110` (Result 2)
@@ -826,13 +826,14 @@ This section covers the absolute essentials – the fundamental techniques that 
         *   **Internal Nodes:** Contain the cryptographic hash of the concatenation of their child nodes' hashes.
         *   **Root Node (Merkle Root):** The single hash at the top of the tree, which represents a hash of all the data blocks underneath it. 🌲
     *   **Structure:** Typically a binary tree, but can have more children per node.
-        ```
+        ```text
               Root Hash
              /         \
         Hash(AB)       Hash(CD)
        /      \       /      \
     Hash(A)  Hash(B) Hash(C)  Hash(D)   <-- Leaf Nodes (Hashes of Data Blocks A, B, C, D)
-        ```
+
+```
     *   **Advantages:**
         *   **Efficiency in Verification:** To verify if a specific data block (`A`) is part of the tree (and thus part of the overall dataset represented by the Root Hash), you only need the block itself (`A`), the Root Hash, and the hashes of the "sibling" nodes along the path from the leaf to the root (this path is called the **Merkle Proof** or **Audit Path**). For the example above, to verify `A`, you'd need `Hash(B)` and `Hash(CD)`. You recalculate `Hash(A)`, then `Hash( Hash(A) || Hash(B) )`, then `Hash( Hash(AB) || Hash(CD) )` and check if it matches the known Root Hash. This verification takes logarithmic time complexity (O(log n)) relative to the number of data blocks (n), which is much faster than checking all blocks (O(n)). ⏱️
         *   **Tamper Detection:** If any data block is altered, its hash changes, which changes the hash of its parent node, and this change propagates all the way up to the Merkle Root. A mismatch in the root hash indicates tampering somewhere in the data.
