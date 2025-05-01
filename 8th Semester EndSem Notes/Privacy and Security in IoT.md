@@ -1232,6 +1232,9 @@ Many IoT devices are small, cheap, and run on batteries. They can't handle heavy
 
 *   **Differentiation from Traditional Approaches (Q78, Q177):**
 
+![image](https://github.com/user-attachments/assets/e826bd7e-49a8-415d-8a8f-7773e489d96d)
+
+
     | Feature             | Lightweight Schemes 💡                | Traditional Schemes 🏋️‍♂️             |
     | :------------------ | :------------------------------------ | :--------------------------------- |
     | **Computational Cost** | Low                                   | High                               |
@@ -1367,6 +1370,9 @@ Let's put these techniques into practice, compare them, and see how well they ho
 **(Related Questions: Q76, Q175, Q88, Q187)**
 
 *   **Comparing General IoT Privacy Techniques (Q76, Q175):**
+
+![image](https://github.com/user-attachments/assets/464a26b1-5e7a-468d-8d75-434ed671f28f)
+
 
     | Technique              | Privacy Strength | Utility Impact | Overhead (Comp/Comm) | Key Idea                        | Best Use Case Examples              |
     | :--------------------- | :--------------- | :------------- | :------------------- | :------------------------------ | :---------------------------------- |
