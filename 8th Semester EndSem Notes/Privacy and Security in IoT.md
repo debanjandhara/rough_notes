@@ -85,11 +85,6 @@ Now, let's talk security! Given how these systems interact with the physical wor
     *   **Supply Chain Complexity:** Vulnerabilities can be introduced at any point from design to manufacturing to deployment.
 *   **Common Weaknesses / Vulnerability Categories (Q3 & Q10 Comparison):**
 
- ![image](https://github.com/user-attachments/assets/e4bf6903-9e09-47e9-b1fc-090fb7916658)
- ![image](https://github.com/user-attachments/assets/4cc9beae-e7f5-40df-becb-9e9d8fb5c9ce)
-
-
-
     | Vulnerability Type        | Description                                                                 | Examples                                                                     | Contrast Point                                                                 |
     | :------------------------ | :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
     | **1. Weak Authentication/Credentials** | Using default, easily guessable, or hardcoded passwords/keys.             | "admin"/"password", using device serial number as key.                       | *Configuration/User Error:* Often easy to fix but relies on user/deployer action. |
@@ -102,6 +97,10 @@ Now, let's talk security! Given how these systems interact with the physical wor
     | **8. Lack of Device Management** | Inability to securely manage devices (inventory, configuration, monitoring). | No way to track deployed devices, disable lost/stolen devices remotely.    | *Operational Flaw:* Makes large deployments hard to secure and maintain.     |
     | **9. Insecure Default Settings** | Shipping devices with insecure configurations enabled by default.          | Universal Plug and Play (UPnP) enabled, default weak Wi-Fi passwords.        | *Design/Configuration Choice:* Prioritizes ease-of-use over security.        |
     | **10. Lack of Physical Hardening** | Device is easily opened, tampered with, or has exposed debugging ports. | Unprotected JTAG/UART ports allowing firmware extraction, easily removable storage. | *Hardware/Physical Flaw:* Requires physical access but can be devastating. |
+
+
+ ![image](https://github.com/user-attachments/assets/e4bf6903-9e09-47e9-b1fc-090fb7916658)
+ ![image](https://github.com/user-attachments/assets/4cc9beae-e7f5-40df-becb-9e9d8fb5c9ce)
 
 *   **Recognizing them:** Look for default passwords, check open ports (using tools like Nmap), analyze network traffic (Wireshark), examine mobile apps and web interfaces, check for firmware update mechanisms, and research known vulnerabilities in device components.
 
@@ -1232,9 +1231,6 @@ Many IoT devices are small, cheap, and run on batteries. They can't handle heavy
 
 *   **Differentiation from Traditional Approaches (Q78, Q177):**
 
-![image](https://github.com/user-attachments/assets/e826bd7e-49a8-415d-8a8f-7773e489d96d)
-
-
     | Feature             | Lightweight Schemes 💡                | Traditional Schemes 🏋️‍♂️             |
     | :------------------ | :------------------------------------ | :--------------------------------- |
     | **Computational Cost** | Low                                   | High                               |
@@ -1244,6 +1240,8 @@ Many IoT devices are small, cheap, and run on batteries. They can't handle heavy
     | **Security Level**  | Often "good enough", may be lower     | Generally higher, more robust      |
     | **Examples**        | Lightweight ciphers (PRESENT, SIMON), simple anonymization, aggregation | RSA, ECC, AES (complex modes), Homomorphic Encryption, Complex k-anonymity |
     | **Best For**        | Resource-constrained devices (sensors, tags), real-time apps | Servers, powerful devices, high-security needs |
+
+![image](https://github.com/user-attachments/assets/e826bd7e-49a8-415d-8a8f-7773e489d96d)
 
 *   **Proposing a New Lightweight Scheme (Conceptual Example) (Q98, Q197):**
     *   *(Exam Tip: You'd describe a concept, not invent production-ready crypto!)*
@@ -1371,9 +1369,6 @@ Let's put these techniques into practice, compare them, and see how well they ho
 
 *   **Comparing General IoT Privacy Techniques (Q76, Q175):**
 
-![image](https://github.com/user-attachments/assets/464a26b1-5e7a-468d-8d75-434ed671f28f)
-
-
     | Technique              | Privacy Strength | Utility Impact | Overhead (Comp/Comm) | Key Idea                        | Best Use Case Examples              |
     | :--------------------- | :--------------- | :------------- | :------------------- | :------------------------------ | :---------------------------------- |
     | **Anonymization** (k-anon) | Moderate         | Moderate       | Moderate             | Hide in a crowd                 | Location data, database release   |
@@ -1384,6 +1379,8 @@ Let's put these techniques into practice, compare them, and see how well they ho
     | **Obfuscation/Perturb.** | Low-Moderate     | Moderate       | Low                  | Make data less precise/noisy    | Location reporting, simple sensors|
     | **SMC / Homomorphic Enc.** | Very High        | Low            | Very High            | Compute on encrypted data       | Secure aggregation, joint analytics |
     | **Access Control**     | Varies (Policy)  | Low            | Low-Moderate         | Limit who sees data             | Almost all systems (essential)    |
+
+![image](https://github.com/user-attachments/assets/464a26b1-5e7a-468d-8d75-434ed671f28f)
 
 *   **Comparing PPDD Mechanisms (Specifically for Dissemination) (Q88, Q187):**
     *   **Focus:** Methods applied when *sharing* data outwards.
