@@ -826,7 +826,7 @@ This section covers the absolute essentials – the fundamental techniques that 
         *   **Internal Nodes:** Contain the cryptographic hash of the concatenation of their child nodes' hashes.
         *   **Root Node (Merkle Root):** The single hash at the top of the tree, which represents a hash of all the data blocks underneath it. 🌲
     *   **Structure:** Typically a binary tree, but can have more children per node.
-            ```text
+      ```text
             Root Hash
            /         \
       Hash(AB)       Hash(CD)
