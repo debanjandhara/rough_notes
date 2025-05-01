@@ -826,17 +826,16 @@ This section covers the absolute essentials – the fundamental techniques that 
         *   **Internal Nodes:** Contain the cryptographic hash of the concatenation of their child nodes' hashes.
         *   **Root Node (Merkle Root):** The single hash at the top of the tree, which represents a hash of all the data blocks underneath it. 🌲
     *   **Structure:** Typically a binary tree, but can have more children per node.
-```text
-      Root Hash
-     /         \
-Hash(AB)       Hash(CD)
- /    \         /    \
-A      B       C      D  <-- Leaf Nodes (Hashes of Data Blocks A, B, C, D)
-```
-```
-```
+            ```text
+            Root Hash
+           /         \
+      Hash(AB)       Hash(CD)
+       /    \         /    \
+      A      B       C      D  <-- Leaf Nodes (Hashes of Data Blocks A, B, C, D)
+      ```
 
-    *   **Advantages:**
+
+*   **Advantages:**
         *   **Efficiency in Verification:** To verify if a specific data block (`A`) is part of the tree (and thus part of the overall dataset represented by the Root Hash), you only need the block itself (`A`), the Root Hash, and the hashes of the "sibling" nodes along the path from the leaf to the root (this path is called the **Merkle Proof** or **Audit Path**). For the example above, to verify `A`, you'd need `Hash(B)` and `Hash(CD)`. You recalculate `Hash(A)`, then `Hash( Hash(A) || Hash(B) )`, then `Hash( Hash(AB) || Hash(CD) )` and check if it matches the known Root Hash. This verification takes logarithmic time complexity (O(log n)) relative to the number of data blocks (n), which is much faster than checking all blocks (O(n)). ⏱️
         *   **Tamper Detection:** If any data block is altered, its hash changes, which changes the hash of its parent node, and this change propagates all the way up to the Merkle Root. A mismatch in the root hash indicates tampering somewhere in the data.
 *   **Enhancing Security (Data Verification, Blockchain) (Q37):**
