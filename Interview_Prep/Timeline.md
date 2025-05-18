@@ -1,7 +1,3 @@
-Here's a **complete study timeline** and **progress tracker** in **Markdown format** with checklists ✅, an **Excel format study planner**, and a suggestion for a **chart-based progress tracker**.
-
----
-
 ## 📅 **Study Timeline** (18–24 May 2025)
 
 > **Goal**: Be fully prepared for Infosys (21st May) and TCS (24th May) interviews.
