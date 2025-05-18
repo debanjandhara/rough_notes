@@ -5,6 +5,8 @@
 
 ---
 
+[comment]: <> (This is a comment, it will not be included)
+
 ## ✅ **High-Level Checklist**
 
 ### 🔁 Core CS Subjects
@@ -65,8 +67,6 @@
 | 22nd May | 6 PM – 9 PM  | TCS-specific HR Q\&A                | ⬜️ Not Done | 🔴 High    |       |
 | 23rd May | Full Day     | Revision + Mock Interview           | ⬜️ Not Done | 🔴 High    |       |
 | 24th May | —            | ✅ TCS Interview                     | ⬜️ Pending  | 🔵 Special |       |
-
-You can download this in Excel or Google Sheets and apply conditional formatting.
 
 ---
 
