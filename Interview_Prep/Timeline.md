@@ -5,8 +5,6 @@
 
 ---
 
-[comment]: <> (This is a comment, it will not be included)
-
 ## ✅ **High-Level Checklist**
 
 ### 🔁 Core CS Subjects
@@ -69,7 +67,9 @@
 | 24th May | —            | ✅ TCS Interview                     | ⬜️ Pending  | 🔵 Special |       |
 
 ---
+Here is your entire section commented out using **HTML-style comments**, which is the correct way to add comments in a Markdown file:
 
+<!--
 ## 📈 Visual Progress Tracker (Sample Representation in Excel/Sheets)
 
 To build this:
@@ -91,6 +91,7 @@ To build this:
 ## 📘 Folder Structure (Optional for Study Organization)
 
 ```
+
 /Interview-Prep
 ├── DSA
 │   ├── Arrays.md
@@ -103,11 +104,13 @@ To build this:
 │   └── OOPs.md
 ├── HR
 │   ├── Resume.pdf
-│   ├── HR_Questions.md
+│   ├── HR\_Questions.md
 │   └── Projects.md
 ├── Mock-Interviews
 │   └── Infosys-TCS-Prep.md
+
 ```
+-->
 
 ---
 
