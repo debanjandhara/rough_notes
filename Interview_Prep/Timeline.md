@@ -66,10 +66,10 @@
 | 23rd May | Full Day     | Revision + Mock Interview           | ⬜️ Not Done | 🔴 High    |       |
 | 24th May | —            | ✅ TCS Interview                     | ⬜️ Pending  | 🔵 Special |       |
 
----
-Here is your entire section commented out using **HTML-style comments**, which is the correct way to add comments in a Markdown file:
-
 <!--
+
+---
+
 ## 📈 Visual Progress Tracker (Sample Representation in Excel/Sheets)
 
 To build this:
