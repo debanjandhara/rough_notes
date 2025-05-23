@@ -1,10 +1,10 @@
-# 🚀 Your Awesome B.Tech Chatbot Project: From Pixels to Personality! 🤖
+# 🎓 Vaibhavi Roy B.Tech Chatbot Project 🤖
 
-Hey there, future AI whiz! 🌟 So, your B.Tech final year project is to build a chatbot, and your teacher wants you to get your hands dirty by training your *own* model, not just calling some fancy API. That's fantastic! It's like learning to cook a gourmet meal from scratch instead of just microwaving a TV dinner. 🍳 You'll understand the ingredients, the process, and the magic behind it all!
+Hey! So your final year project is building a chatbot, and your professor wants you to **train your own model** instead of just using some plug-and-play API. That’s actually pretty cool. Think of it like cooking a meal from scratch instead of just heating something in the microwave—you’ll really learn what goes into it and how it all works. 🍳
 
-This guide will walk you through the Python code you've got, explaining every nook and cranny. We'll see how to build a basic sequence-to-sequence (Seq2Seq) model, which is a classic architecture for tasks like machine translation and, you guessed it, chatbots!
+This guide will help you make sense of the Python code you're working with. We’ll go step by step through how to build a simple sequence-to-sequence (Seq2Seq) model—a solid way to get a basic chatbot up and running.
 
-Let's dive in! 🏊‍♂️
+Ready? Let’s get into it. 👇
 
 ---
 
