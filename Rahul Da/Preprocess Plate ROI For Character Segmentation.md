@@ -1,3 +1,6 @@
+
+![Rahul-Da_ANPR Flow_Excalidraw_v0 1](https://github.com/user-attachments/assets/fb0b1acc-d1f9-4ec5-b1f1-1b68d5e8bef1)
+
 ```dart
 ALGORITHM: Preprocess_Plate_ROI_For_Character_Segmentation
 
