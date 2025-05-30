@@ -1,4 +1,4 @@
-```cpp
+```javascript
 ALGORITHM: Preprocess_Plate_ROI_For_Character_Segmentation
 
 PURPOSE:
