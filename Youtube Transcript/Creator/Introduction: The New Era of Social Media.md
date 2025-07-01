@@ -1,4 +1,4 @@
-Of course. Here is a comprehensive summary of the key points and main ideas presented in the video.
+Of course. Here is a comprehensive summary of the key points and main ideas presented in the video (https://www.youtube.com/watch?v=Vcqgw5zWtDQ) .
 
 ### **Introduction: The New Era of Social Media**
 
