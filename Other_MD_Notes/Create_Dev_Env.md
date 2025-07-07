@@ -9,7 +9,7 @@
 2. Click **“Connect Repository”**
 3. Choose **GitHub (Cloud Build GitHub App)**
 4. Authorize and select your GitHub account
-5. Choose the **repo (frontend/backend)** (one at a time) and click **Connect**
+5. Choose the **repo (frontend/backend)** `(one at a time)` and click **Connect**
 
 ---
 
