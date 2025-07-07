@@ -24,7 +24,7 @@
    * **Repository:** Select the one you connected
 3. **Configuration**:
 
-   * Choose **Cloud Build configuration: 'cloudbuild.yaml'
+   * Choose **Cloud Build configuration: `cloudbuild.yaml`
    * Choose the **directory** of your app (usually `.`)
    * Select **Region** (e.g., `us-central1`)
    * Set **Service Name** (e.g., `frontend-dev`, `backend-dev`)
