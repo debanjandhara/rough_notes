@@ -1,0 +1,216 @@
+{
+  "title": "Java Programming Quiz",
+  "description": "A quiz based on the Java questions presented in the video.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Identify the interface which is used to declare core methods in Java?",
+      "options": ["COMPARATOR", "EVENTLISTENER", "SET", "COLLECTION"],
+      "answer": "COLLECTION",
+      "explanation": "The 'Collection' interface is the root of the Java Collections Framework. It defines the most basic methods that all collections must implement, such as add(), remove(), size(), and iterator()."
+    },
+    {
+      "id": 2,
+      "question": "Number of primitive data types in Java are?",
+      "options": ["6", "7", "8", "9"],
+      "answer": "8",
+      "explanation": "Java has exactly eight primitive data types: byte, short, int, long, float, double, boolean, and char. These are not objects and store the actual values."
+    },
+    {
+      "id": 3,
+      "question": "What is the size of float and double in Java?",
+      "options": ["32 AND 64", "32 AND 32", "64 AND 64", "64 AND 32"],
+      "answer": "32 AND 64",
+      "explanation": "A 'float' is a single-precision 32-bit floating-point number, and a 'double' is a double-precision 64-bit floating-point number."
+    },
+    {
+      "id": 4,
+      "question": "Automatic type conversion is possible in which of the possible cases?",
+      "options": ["BYTE TO INT", "INT TO LONG", "LONG TO INT", "SHORT TO INT"],
+      "answer": "INT TO LONG",
+      "explanation": "Automatic type conversion (widening) occurs when converting from a smaller data type to a larger one where no data loss can occur. A 'long' (64-bit) can safely hold any 'int' (32-bit) value. 'LONG TO INT' would be a narrowing conversion requiring an explicit cast."
+    },
+    {
+      "id": 5,
+      "question": "Find the output of the following code: INT INTEGER = 24; CHAR STRING = 'I'; SYSTEM.OUT.PRINT(INTEGER); SYSTEM.OUT.PRINT(STRING);",
+      "options": ["COMPILE ERROR", "THROWS EXCEPTION", "24 I"],
+      "answer": "24 I",
+      "explanation": "System.out.print() prints its argument to the console without adding a newline. The first call prints '24', and the second call prints 'I' immediately after it on the same line."
+    },
+    {
+      "id": 6,
+      "question": "Find the output of the following program: PUBLIC CLASS SOLUTION{ PUBLIC STATIC VOID MAIN(STRING[] ARGS){ SHORT X = 10; X = X * 5; SYSTEM.OUT.PRINT(X); } }",
+      "options": [],
+      "answer": "COMPILER ERROR",
+      "explanation": "In Java, arithmetic operations on smaller integer types like 'byte' or 'short' automatically promote the operands to 'int'. The result of 'X * 5' is an 'int'. Assigning this 'int' result back to the 'short' variable 'X' without an explicit cast `(short)(X * 5)` causes a type mismatch and thus a compiler error."
+    },
+    {
+      "id": 7,
+      "question": "Find the output of the following program: PUBLIC CLASS SOLUTION{ PUBLIC STATIC VOID MAIN(STRING[] ARGS){ BYTE X = 127; X++; X++; SYSTEM.OUT.PRINT(X); } }",
+      "options": [],
+      "answer": "-127",
+      "explanation": "A 'byte' in Java has a range from -128 to 127. When X is 127 (its maximum value), the first 'X++' causes it to overflow and wrap around to its minimum value, -128. The second 'X++' then increments -128 to -127."
+    },
+    {
+      "id": 8,
+      "question": "Select the valid statement.",
+      "options": ["CHAR[] CH = NEW CHAR(5)", "CHAR[] CH = NEW CHAR[5]", "CHAR[] CH = NEW CHAR()", "CHAR[] CH = NEW CHAR[]"],
+      "answer": "CHAR[] CH = NEW CHAR[5]",
+      "explanation": "This is the correct syntax to declare and instantiate an array in Java. The size of the array is specified within square brackets `[ ]`, not parentheses `( )`."
+    },
+    {
+      "id": 9,
+      "question": "When an array is passed to a method, what does the method receive?",
+      "options": ["THE REFERENCE OF THE ARRAY", "A COPY OF THE ARRAY", "LENGTH OF THE ARRAY", "COPY OF FIRST ELEMENT"],
+      "answer": "THE REFERENCE OF THE ARRAY",
+      "explanation": "In Java, objects and arrays are passed by value, but the value being passed is the memory reference. Therefore, the method receives a copy of the reference that points to the original array, allowing the method to modify the contents of that original array."
+    },
+    {
+      "id": 10,
+      "question": "Find the value of A[1] after execution of the following program: INT[] A = {0,2,4,1,3}; FOR(INT I = 0; I < A.LENGTH; I++){ A[I] = A[(A[I] + 3) % A.LENGTH]; }",
+      "options": [],
+      "answer": "1",
+      "explanation": "The array is modified in place. Let's trace it: Original A = [0,2,4,1,3]. After i=0, A becomes [1,2,4,1,3]. After i=1, A[1] becomes A[(2+3)%5] = A[0], which is now 1. The final array is [1,1,4,3,1], so A[1] is 1."
+    },
+    {
+      "id": 11,
+      "question": "Arrays in Java are-",
+      "options": ["OBJECT REFERENCES", "OBJECTS", "PRIMITIVE DATA TYPE", "NONE"],
+      "answer": "OBJECTS",
+      "explanation": "In Java, arrays are objects. They are created dynamically on the heap and have properties (like 'length') and inherit methods from the Object class."
+    },
+    {
+      "id": 12,
+      "question": "When is the object created with new keyword?",
+      "options": ["AT RUN TIME", "AT COMPILE TIME", "DEPENDS ON THE CODE", "NONE"],
+      "answer": "AT RUN TIME",
+      "explanation": "The 'new' keyword performs dynamic memory allocation on the heap. This process happens when the program is executing (run time), not during compilation."
+    },
+    {
+      "id": 13,
+      "question": "Identify what can directly access and change the value of the variable RES: PACKAGE COM.MYPACKAGE; PUBLIC CLASS SOLUTION{ PRIVATE INT RES = 100; }",
+      "options": [],
+      "answer": "ONLY CLASS SOLUTION",
+      "explanation": "The 'private' access modifier restricts access to the member (variable or method) to only within the class where it is declared. No other class can access it directly."
+    },
+    {
+      "id": 14,
+      "question": "In which of the following is toString() method defined?",
+      "options": ["JAVA.LANG.OBJECT", "JAVA.LANG.STRING", "JAVA.LANG.UTIL", "NONE"],
+      "answer": "JAVA.LANG.OBJECT",
+      "explanation": "The toString() method is originally defined in the java.lang.Object class. Since Object is the ultimate superclass of all classes in Java, every object inherits this method."
+    },
+    {
+      "id": 15,
+      "question": "compareTo() returns",
+      "options": ["TRUE", "FALSE", "AN INT VALUE", "NONE"],
+      "answer": "AN INT VALUE",
+      "explanation": "The compareTo() method, from the Comparable interface, returns an integer. It returns a negative integer if the current object is less than the argument, zero if they are equal, and a positive integer if it's greater."
+    },
+    {
+      "id": 16,
+      "question": "Identify the output of the following program: STRING STR = \"ABCDE\"; SYSTEM.OUT.PRINTLN(STR.SUBSTRING(1, 3));",
+      "options": ["ABC", "BC", "BCD", "CD"],
+      "answer": "BC",
+      "explanation": "The substring(beginIndex, endIndex) method extracts characters from the beginIndex up to, but not including, the endIndex. In \"ABCDE\", this is the character at index 1 ('B') and index 2 ('C')."
+    },
+    {
+      "id": 17,
+      "question": "Identify the output of the following program: STRING STR = \"HELLOW\"; SYSTEM.OUT.PRINTLN(STR.INDEXOF('T'));",
+      "options": ["0", "1", "TRUE", "-1"],
+      "answer": "-1",
+      "explanation": "The indexOf() method returns the index of the first occurrence of a character. If the character is not found in the string, it returns -1. 'T' is not in \"HELLOW\"."
+    },
+    {
+      "id": 18,
+      "question": "Identify the output of the following program: PUBLIC CLASS TEST{ PUBLIC STATIC VOID MAIN(STRING ARGOS[]){ STRING STR1 = \"ONE\"; STRING STR2 = \"TWO\"; SYSTEM.OUT.PRINTLN(STR1.CONCAT(STR2)); } }",
+      "options": [],
+      "answer": "ONETWO",
+      "explanation": "The String.concat() method appends one string to the end of another. Here, \"TWO\" is appended to \"ONE\", resulting in \"ONETWO\"."
+    },
+    {
+      "id": 19,
+      "question": "What does the following string do to given string str1: STRING STR1 = \"INTERVIEWBIT\".REPLACE('E', 'S');",
+      "options": ["REPLACES SINGLE OCCURRENCE OF 'E' TO 'S'.", "REPLACES ALL OCCURRENCES OF 'E' TO 'S'.", "REPLACES SINGLE OCCURRENCE OF 'S' TO 'E'.", "NONE."],
+      "answer": "REPLACES ALL OCCURRENCES OF 'E' TO 'S'.",
+      "explanation": "The String.replace(char, char) method returns a new string where *all* occurrences of the first character are replaced by the second character. The original string remains unchanged."
+    },
+    {
+      "id": 20,
+      "question": "Find the output of the following code: INT ++A = 100; SYSTEM.OUT.PRINTLN(++A);",
+      "options": ["101", "COMPILE ERROR AS ++A IS NOT VALID IDENTIFIER", "100", "NONE"],
+      "answer": "COMPILE ERROR AS ++A IS NOT VALID IDENTIFIER",
+      "explanation": "The left side of an assignment operator must be a variable (an l-value). '++A' is an expression that evaluates to a value, but it is not a variable location where a value can be stored. This is a syntax error."
+    },
+    {
+      "id": 21,
+      "question": "Find the output of the following code: IF(1 + 1 + 1 + 1 + 1 == 5){ SYSTEM.OUT.PRINT(\"TRUE\"); } ELSE{ SYSTEM.OUT.PRINT(\"FALSE\"); }",
+      "options": [],
+      "answer": "TRUE",
+      "explanation": "The expression '1 + 1 + 1 + 1 + 1' evaluates to 5. The condition '5 == 5' is true, so the code within the 'if' block is executed, printing \"TRUE\"."
+    },
+    {
+      "id": 22,
+      "question": "Find the output of the following code: PUBLIC CLASS SOLUTION{ PUBLIC STATIC VOID MAIN(STRING... ARGOS){ INT X = 5; X *= (3 + 7); SYSTEM.OUT.PRINTLN(X); } }",
+      "options": [],
+      "answer": "50",
+      "explanation": "Operator precedence dictates that the parentheses are evaluated first: (3 + 7) equals 10. The statement then becomes X *= 10, which is shorthand for X = X * 10. Since X is 5, the result is 5 * 10 = 50."
+    },
+    {
+      "id": 23,
+      "question": "Find the output of the following code: PUBLIC CLASS SOLUTION{ PUBLIC STATIC VOID MAIN(STRING ARGS[]){ INT I; FOR(I = 1; I < 6; I++){ IF(I > 3) CONTINUE; } SYSTEM.OUT.PRINTLN(I); } }",
+      "options": [],
+      "answer": "6",
+      "explanation": "The for-loop iterates with I from 1 to 5. The 'continue' statement is executed for I=4 and I=5. The loop terminates when I becomes 6. The println statement is *outside* the loop, so it prints the final value of I, which is 6."
+    },
+    {
+      "id": 24,
+      "question": "How many times will \"INTERVIEWBIT\" be printed: INT COUNT = 0; DO{ SYSTEM.OUT.PRINTLN(\"INTERVIEWBIT\"); COUNT++; } WHILE(COUNT < 10);",
+      "options": [],
+      "answer": "10",
+      "explanation": "The 'do-while' loop checks its condition after each iteration. It will execute for COUNT values of 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. When COUNT becomes 10, the condition '10 < 10' is false, and the loop stops. This is a total of 10 executions."
+    },
+    {
+      "id": 25,
+      "question": "Identify the infinite loop.",
+      "options": ["FOR( ; ; )", "FOR(INT I = 0; I < 1; I--)", "FOR(INT I = 0; ; I++)", "ALL OF THE ABOVE"],
+      "answer": "ALL OF THE ABOVE",
+      "explanation": "1) for(;;) has no termination condition. 2) for(int i=0; i<1; i--) starts at 0 and decrements, so 'i' will always be less than 1. 3) for(int i=0; ; i++) has no termination condition. All three are infinite loops."
+    },
+    {
+      "id": 26,
+      "question": "What is Runnable?",
+      "options": ["ABSTRACT CLASS", "INTERFACE", "CLASS", "METHOD"],
+      "answer": "INTERFACE",
+      "explanation": "java.lang.Runnable is a functional interface in Java. It defines a single abstract method, run(), and is a common way to define the task that a Thread will execute."
+    },
+    {
+      "id": 27,
+      "question": "Exception created by try block is caught in which block",
+      "options": ["CATCH", "THROW", "FINAL", "NONE"],
+      "answer": "CATCH",
+      "explanation": "In Java's exception handling mechanism, code that may throw an exception is placed in a 'try' block. If an exception occurs, the program flow is transferred to a corresponding 'catch' block designed to handle that specific type of exception."
+    },
+    {
+      "id": 28,
+      "question": "Which of the following is used to find and fix bugs in the program?",
+      "options": ["JDK", "JRE", "JVM", "JDB"],
+      "answer": "JDB",
+      "explanation": "JDB stands for Java Debugger. It is a command-line tool included in the JDK (Java Development Kit) used for debugging Java applications. JDK is the development kit, JRE is the runtime, and JVM is the virtual machine."
+    },
+    {
+      "id": 29,
+      "question": "Identify the incorrect Java feature.",
+      "options": ["OBJECT ORIENTED", "USE OF POINTERS", "DYNAMIC", "ARCHITECTURAL NEURAL"],
+      "answer": "USE OF POINTERS",
+      "explanation": "A key design feature of Java is the absence of explicit pointer arithmetic, which is common in languages like C/C++. This makes Java safer by preventing direct memory manipulation. While Java uses references internally, it does not allow the 'use of pointers' by the programmer."
+    },
+    {
+      "id": 30,
+      "question": "What does the operator >>>> do?",
+      "options": ["RIGHT SHIFT OPERATOR", "LEFT SHIFT OPERATOR", "ZERO FILL LEFT SHIFT", "ZERO FILL RIGHT SHIFT"],
+      "answer": "ZERO FILL RIGHT SHIFT",
+      "explanation": "The '>>>>' operator is the unsigned right shift operator. It shifts the bits to the right and fills the new bits on the left with zeros, regardless of the original sign of the number. This is different from the signed right shift '>>', which preserves the sign bit."
+    }
+  ]
+}
