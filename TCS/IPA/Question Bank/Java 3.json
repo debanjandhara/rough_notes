@@ -1,0 +1,282 @@
+{
+  "title": "TCS IPA JAVA MCQs (Part - I)",
+  "description": "A collection of multiple-choice questions on core Java concepts, based on the video 'TCS IPA JAVA MCQs (Most Asked Questions) Part - I'.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Select the valid statement.",
+      "options": [
+        "char[] ch = new char(5);",
+        "char[] ch = new char[5];",
+        "char[] ch = new char[];",
+        "char[] ch = new char[];"
+      ],
+      "answer": "char[] ch = new char[5];",
+      "explanation": "In Java, the correct syntax to instantiate an array requires specifying its size within square brackets `[]`. Using parentheses `()` or omitting the size is syntactically incorrect."
+    },
+    {
+      "id": 2,
+      "question": "What is the size of float and double in Java?",
+      "options": [
+        "32 and 64",
+        "32 and 32",
+        "64 and 64",
+        "64 and 32"
+      ],
+      "answer": "32 and 64",
+      "explanation": "In Java, a `float` is a 32-bit single-precision floating-point number, and a `double` is a 64-bit double-precision floating-point number."
+    },
+    {
+      "id": 3,
+      "question": "Automatic type conversion is not possible in which case?",
+      "options": [
+        "Byte to int",
+        "Int to long",
+        "Long to int",
+        "Short to int"
+      ],
+      "answer": "Long to int",
+      "explanation": "Automatic type conversion (widening) is only possible from a smaller data type to a larger one. Converting a `long` (64 bits) to an `int` (32 bits) is a narrowing conversion and requires an explicit cast, as it can lead to data loss."
+    },
+    {
+      "id": 4,
+      "question": "Number of primitive data types in Java are?",
+      "options": ["6", "7", "8", "9"],
+      "answer": "8",
+      "explanation": "Java has eight primitive data types: `byte`, `short`, `int`, `long`, `float`, `double`, `boolean`, and `char`."
+    },
+    {
+      "id": 5,
+      "question": "Predict the output of the program: String str = \"I like JAVA\"; System.out.println(str.length());",
+      "options": ["12", "11", "10", "9"],
+      "answer": "11",
+      "explanation": "The `length()` method of a String returns the total number of characters, including spaces. The string \"I like JAVA\" contains 11 characters."
+    },
+    {
+      "id": 6,
+      "question": "Predict the output of the program: String s[] = {\"hybernate\", \"java\", \"object\"}; Arrays.sort(s); for(String k: s) {System.out.println(k); }",
+      "options": [
+        "java hybernate object",
+        "hybernate java object",
+        "hybernate object java",
+        "object java hibernate"
+      ],
+      "answer": "hybernate java object",
+      "explanation": "`Arrays.sort()` sorts strings lexicographically (alphabetically). The order will be 'hybernate', 'java', 'object'. The for-each loop prints each sorted string. The option represents the sequence of printed items."
+    },
+    {
+      "id": 7,
+      "question": "Object includes?",
+      "options": ["Attributes", "Behaviour", "Both", "None"],
+      "answer": "Both",
+      "explanation": "In OOP, an object is defined by its state (attributes/properties) and its behavior (methods/functions)."
+    },
+    {
+      "id": 8,
+      "question": "_____ is also known as a static variable.",
+      "options": [
+        "class variable",
+        "instance variable",
+        "local variable",
+        "all of the above"
+      ],
+      "answer": "class variable",
+      "explanation": "A variable declared with the `static` keyword belongs to the class itself, not to any specific instance. Hence, it is also known as a class variable."
+    },
+    {
+      "id": 9,
+      "question": "Predict the output of the program: char ch = 127; ch++; System.out.println(ch + \"=\" + (int)ch);",
+      "options": [
+        "compilation error",
+        "? = 128",
+        "garbage value = -128",
+        "none of the above"
+      ],
+      "answer": "? = 128",
+      "explanation": "The `char` value 127 is incremented to 128. The character representation of ASCII 128 is not a standard printable character and often appears as '?'. The integer cast `(int)ch` correctly prints its numeric value, 128."
+    },
+    {
+      "id": 10,
+      "question": "Tick the correct one:",
+      "options": [
+        "JVM converts bytecode into machine-level code",
+        "JVM is platform-dependent",
+        "All of these",
+        "Java is platform-independent"
+      ],
+      "answer": "All of these",
+      "explanation": "All statements are true. Java is platform-independent because its bytecode runs on any platform-dependent JVM, which in turn converts the bytecode to native machine code."
+    },
+    {
+      "id": 11,
+      "question": "Which is not the correct declaration?",
+      "options": ["int a_1", "int 1_a", "int A1", "None"],
+      "answer": "int 1_a",
+      "explanation": "In Java, a variable name (identifier) cannot begin with a number. It must start with a letter, underscore (_), or dollar sign ($)."
+    },
+    {
+      "id": 12,
+      "question": "Which operator gives a result if no condition satisfies?",
+      "options": ["IN", "OR", "NOT", "AND"],
+      "answer": "NOT",
+      "explanation": "The logical NOT `!` operator inverts a boolean value. If a condition is false, applying NOT makes it true. The question implies reversing a failed condition."
+    },
+    {
+      "id": 13,
+      "question": "To find the length of the string:",
+      "options": ["a.length;", "a.length();"],
+      "answer": "a.length();",
+      "explanation": "`length()` is a method of the String class and requires parentheses `()` for invocation. In contrast, `length` without parentheses is a property used for arrays."
+    },
+    {
+      "id": 14,
+      "question": "Which is not an OOP concept?",
+      "options": ["Compilation", "Polymorphism", "Encapsulation", "Inheritance"],
+      "answer": "Compilation",
+      "explanation": "Polymorphism, Encapsulation, and Inheritance are core principles of Object-Oriented Programming. Compilation is a general process in programming that translates source code to machine-readable code."
+    },
+    {
+      "id": 15,
+      "question": "What is the extension of Java code files?",
+      "options": [".Java", ".class", "Both 1 and 2", ".txt"],
+      "answer": ".Java",
+      "explanation": "Java source code is written in files with a `.java` extension. After compilation, the bytecode is stored in files with a `.class` extension."
+    },
+    {
+      "id": 16,
+      "question": "Which among the following falls under key elements of programming?",
+      "options": [
+        "Good analytical skills",
+        "Declarative knowledge",
+        "Imperative knowledge",
+        "Abstraction knowledge in programming",
+        "All of these"
+      ],
+      "answer": "All of these",
+      "explanation": "Successful programming requires a mix of problem-solving skills (analytical), knowing 'what' to do (declarative), knowing 'how' to do it (imperative), and managing complexity (abstraction)."
+    },
+    {
+      "id": 17,
+      "question": "Given the code snippet: static int a = 1; void Inc() { a++; System.out.println(a); } Inc(); Inc();",
+      "options": ["1,1", "1,2", "2,3", "2,2"],
+      "answer": "2,3",
+      "explanation": "The variable `a` is static, so its value is shared and persists across method calls. First call: `a` becomes 2, prints 2. Second call: `a` becomes 3, prints 3."
+    },
+    {
+      "id": 18,
+      "question": "Identify the correct definition of a package.",
+      "options": [
+        "A package is a collection of editing tools",
+        "A package is a collection of classes",
+        "A package is a collection of classes and interfaces",
+        "A package is a collection of interfaces"
+      ],
+      "answer": "A package is a collection of classes and interfaces",
+      "explanation": "A Java package is a mechanism for organizing related classes and interfaces into a single namespace to prevent naming conflicts and control access."
+    },
+    {
+      "id": 19,
+      "question": "In which of the following is the toString() method defined?",
+      "options": ["java.lang.Object", "java.lang.String", "java.util", "None"],
+      "answer": "java.lang.Object",
+      "explanation": "The `toString()` method is fundamentally defined in the `java.lang.Object` class, which is the root of the class hierarchy. All other classes inherit this method."
+    },
+    {
+      "id": 20,
+      "question": "Arrays in Java are:",
+      "options": ["Object references", "Objects", "Primitive data type", "None"],
+      "answer": "Objects",
+      "explanation": "In Java, arrays are objects. They reside on the heap and are treated as objects, inheriting methods from the `Object` class."
+    },
+    {
+      "id": 21,
+      "question": "Select the valid statement to declare and initialize an array.",
+      "options": [
+        "int[] A = 0;",
+        "int[] A = [1,2,3];",
+        "int[] A = (1,2,3);",
+        "int[] A = {1,2,3};"
+      ],
+      "answer": "int[] A = {1,2,3};",
+      "explanation": "The correct shorthand syntax for declaring and initializing an array in a single statement is by enclosing the elements in curly braces `{}`."
+    },
+    {
+      "id": 22,
+      "question": "What is the output of the following code? public static void main(String[] args) {int var1 = 1; if (var1) System.out.println(\"Inside If Condition\");}",
+      "options": [
+        "Inside If Condition",
+        "Does not print anything",
+        "Compilation error",
+        "Runtime error"
+      ],
+      "answer": "Compilation error",
+      "explanation": "The `if` statement in Java requires a boolean expression. An integer `var1` cannot be used as a condition, unlike in C/C++. This results in a 'type mismatch' compilation error."
+    },
+    {
+      "id": 23,
+      "question": "What is the output of the following code? import java.util.Scanner; public class Solution { private String name = \"TATA\"; public static void main(String[] args) {Solution t = (Solution) new Object(); System.out.println(t.name); } }",
+      "options": ["Runtime error", "TATA", "Compile error", "None of the above"],
+      "answer": "Runtime error",
+      "explanation": "The code compiles but will throw a `java.lang.ClassCastException` at runtime. An object of the superclass `Object` cannot be cast down to its subclass `Solution`."
+    },
+    {
+      "id": 24,
+      "question": "If a package name contains more than one word, the words must be separated by...",
+      "options": ["Comma", "Dot", "Hyphen", "underscore"],
+      "answer": "Dot",
+      "explanation": "Java package names follow a hierarchical structure where levels are separated by a dot (`.`). This is the standard convention (e.g., `java.util.Scanner`)."
+    },
+    {
+      "id": 25,
+      "question": "What is the output of the following code? {int var1; if (var1 == 0)System.out.println(\"Inside If Condition\");}",
+      "options": [
+        "Inside If Condition",
+        "Does not print anything",
+        "Compilation error",
+        "Runtime error"
+      ],
+      "answer": "Compilation error",
+      "explanation": "The local variable `var1` is declared but not initialized. Attempting to read its value to compare it with 0 results in a compilation error: 'variable var1 might not have been initialized'."
+    },
+    {
+      "id": 26,
+      "question": "Which modifier can be used to prevent any method or attribute from being visible to external classes?",
+      "options": ["Private", "Public", "Protected", "Default"],
+      "answer": "Private",
+      "explanation": "The `private` access modifier ensures that a member is accessible only within its own class, providing the highest level of encapsulation and hiding it from all external classes."
+    },
+    {
+      "id": 27,
+      "question": "Which modifier can be used to restrict a method or attribute from being visible outside its package?",
+      "options": [
+        "Private",
+        "Public",
+        "Protected",
+        "Default (No modifier)"
+      ],
+      "answer": "Default (No modifier)",
+      "explanation": "When no access modifier is specified, the member has 'default' or 'package-private' visibility. It is visible to all classes within the same package but not to any class outside the package."
+    },
+    {
+      "id": 28,
+      "question": "Which of these cannot be used as a variable name in Java?",
+      "options": ["Identifier & Keyword", "Keyword", "Identifier", "None of these"],
+      "answer": "Keyword",
+      "explanation": "Keywords are reserved words in Java (e.g., `public`, `static`, `if`) that have special meaning to the compiler and cannot be used as names for variables, methods, or classes."
+    },
+    {
+      "id": 29,
+      "question": "Which component is used to compile, debug, and execute a Java program?",
+      "options": ["JIT", "JRE", "JVM", "JDK"],
+      "answer": "JDK",
+      "explanation": "The Java Development Kit (JDK) is the complete software package for developing Java applications. It includes the compiler (`javac`), debugger, and the Java Runtime Environment (JRE) to execute the code."
+    },
+    {
+      "id": 30,
+      "question": "What is the extension of compiled Java classes?",
+      "options": [".Java", ".txt", ".class", ".exe"],
+      "answer": ".class",
+      "explanation": "The Java compiler (`javac`) compiles `.java` source files into platform-independent bytecode, which is stored in files with a `.class` extension."
+    }
+  ]
+}
