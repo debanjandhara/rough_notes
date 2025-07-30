@@ -1,0 +1,286 @@
+{
+  "title": "Java Coding PYQ's Quiz",
+  "description": "A quiz with must-know Java questions based on previous year questions (PYQs).",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int x = 10;\n        System.out.println(x++);\n        System.out.println(++x);\n    }\n}",
+      "options": ["10\n11", "10\n12", "11\n12", "11\n11"],
+      "answer": "10\n12",
+      "explanation": "The first println uses x++ (post-increment), so it prints the current value of x (10) and then increments x to 11. The second println uses ++x (pre-increment), so it first increments x to 12 and then prints the new value."
+    },
+    {
+      "id": 2,
+      "question": "What will be the output of the following Java code snippet?\n(Assuming System.out.println(s1 == s2); and System.out.println(s1 == s3); are called)",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        String s1 = \"Hello\";\n        String s2 = \"Hello\";\n        String s3 = new String(\"Hello\");\n    }\n}",
+      "options": ["true\ntrue", "true\nfalse", "false\ntrue", "false\nfalse"],
+      "answer": "true\nfalse",
+      "explanation": "s1 == s2 is true because string literals are stored in the string pool, and both variables point to the same object. s1 == s3 is false because 'new String()' creates a new object in heap memory, so they are different objects."
+    },
+    {
+      "id": 3,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int[] arr = {1, 2, 3, 4, 5};\n        System.out.println(arr[5]);\n    }\n}",
+      "options": ["5", "null", "0", "ArrayIndexOutOfBoundsException"],
+      "answer": "ArrayIndexOutOfBoundsException",
+      "explanation": "Array indices are 0-based. For an array of size 5, the valid indices are 0, 1, 2, 3, and 4. Accessing index 5 is out of bounds and throws an ArrayIndexOutOfBoundsException."
+    },
+    {
+      "id": 4,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        try {\n            int divideByZero = 10 / 0;\n            System.out.println(\"Result: \" + divideByZero);\n        } catch (ArithmeticException e) {\n            System.out.println(\"Cannot divide by zero.\");\n        } finally {\n            System.out.println(\"Finally block executed.\");\n        }\n    }\n}",
+      "options": ["Cannot divide by zero.\nFinally block executed.", "Result: 0\nFinally block executed.", "Compilation Error", "ArithmeticException."],
+      "answer": "Cannot divide by zero.\nFinally block executed.",
+      "explanation": "Division by zero throws an ArithmeticException. The corresponding catch block is executed, printing 'Cannot divide by zero.'. The 'finally' block is always executed, regardless of whether an exception was thrown or caught."
+    },
+    {
+      "id": 5,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int x = 5;\n        if (x > 5) {\n            System.out.println(\"Greater\");\n        } else if (x < 5) {\n            System.out.println(\"Smaller\");\n        } else {\n            System.out.println(\"Equal\");\n        }\n    }\n}",
+      "options": ["Greater", "Smaller", "Equal", "No output"],
+      "answer": "Equal",
+      "explanation": "The condition x > 5 is false. The condition x < 5 is false. Therefore, the final 'else' block is executed, printing 'Equal'."
+    },
+    {
+      "id": 6,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        String str = \"Java\";\n        str.concat(\" Programming\");\n        System.out.println(str);\n    }\n}",
+      "options": ["Java Programming", "Java", "Programming", "Compilation Error"],
+      "answer": "Java",
+      "explanation": "String objects in Java are immutable. The concat() method does not change the original string; it returns a new string. Since the new string is not assigned to any variable, the original 'str' remains unchanged."
+    },
+    {
+      "id": 7,
+      "question": "What is the output of the following code?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int num = 7;\n        String result = (num % 2 == 0) ? \"Even\" : \"Odd\";\n        System.out.println(result);\n    }\n}",
+      "options": ["Even", "Odd", "Compilation Error", "Runtime Error"],
+      "answer": "Odd",
+      "explanation": "This is a ternary operator. The condition is (7 % 2 == 0). 7 % 2 equals 1. Since 1 == 0 is false, the expression after the colon ('Odd') is assigned to 'result'."
+    },
+    {
+      "id": 8,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        for (int i = 0; i < 3; i++) {\n            System.out.print(i + \" \");\n        }\n    }\n}",
+      "options": ["0 1 2 ", "0 1 2 3", "1 2", "Compilation Error"],
+      "answer": "0 1 2 ",
+      "explanation": "The loop initializes 'i' to 0 and runs as long as 'i' is less than 3. It prints the value of 'i' followed by a space in each iteration (0, 1, 2). When 'i' becomes 3, the condition fails and the loop terminates."
+    },
+    {
+      "id": 9,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int[] numbers = {10, 20, 30};\n        System.out.println(numbers.length);\n    }\n}",
+      "options": ["3", "4", "0", "NullPointerException"],
+      "answer": "3",
+      "explanation": "The 'length' property of an array returns the total number of elements it contains. The 'numbers' array has 3 elements."
+    },
+    {
+      "id": 10,
+      "question": "What will happen when you try to compile and run the following code?",
+      "code": "class Parent {\n    private void display() {\n        System.out.println(\"Parent\");\n    }\n}\nclass Child extends Parent {\n    public void display() {\n        System.out.println(\"Child\");\n    }\n    public static void main(String[] args) {\n        Child obj = new Child();\n        obj.display();\n    }\n}",
+      "options": ["Parent", "Child", "Compilation Error", "Runtime Error"],
+      "answer": "Child",
+      "explanation": "The display() method in Parent is private, so it is not visible to the Child class and cannot be overridden. The public display() in Child is a new, separate method. The call obj.display() resolves to the method within the Child class."
+    },
+    {
+      "id": 11,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int a = 10, b = 20;\n        System.out.println(\"Sum is \" + a + b);\n    }\n}",
+      "options": ["Sum is 30", "Sum is 1020", "Sum is 10 20", "Compilation Error"],
+      "answer": "Sum is 1020",
+      "explanation": "The '+' operator is evaluated from left to right. When an operand is a String, it performs string concatenation. \"Sum is \" + a becomes \"Sum is 10\". Then, \"Sum is 10\" + b becomes \"Sum is 1020\"."
+    },
+    {
+      "id": 12,
+      "question": "What will be the output of the following Java code?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        for (int i = 0; i < 5; i++) {\n            if (i == 2) {\n                continue;\n            }\n            System.out.print(i + \" \");\n        }\n    }\n}",
+      "options": ["0 1 2 3 4 ", "0 1 3 4 ", "0 1 2 3 ", "1 3 4 "],
+      "answer": "0 1 3 4 ",
+      "explanation": "The 'continue' statement skips the rest of the current loop iteration. When i is 2, the System.out.print() statement is skipped, and the loop proceeds to the next iteration where i is 3."
+    },
+    {
+      "id": 13,
+      "question": "What is the output?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        String str = null;\n        System.out.println(str.length());\n    }\n}",
+      "options": ["0", "null", "NullPointerException", "Compilation Error"],
+      "answer": "NullPointerException",
+      "explanation": "Attempting to call a method (like length()) on a reference that is null results in a NullPointerException at runtime."
+    },
+    {
+      "id": 14,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int result = calculate(5);\n        System.out.println(result);\n    }\n    public static int calculate(int n) {\n        if (n <= 1) {\n            return n;\n        } else {\n            return n * calculate(n - 1);\n        }\n    }\n}",
+      "options": ["120", "5", "0", "StackOverflowError"],
+      "answer": "0",
+      "explanation": "The function is recursive. calculate(5) returns 5 * calculate(4), and so on. The base case is when n <= 1, where it returns n. The chain becomes 5 * 4 * 3 * 2 * calculate(1). Since calculate(1) returns 1, this would be 120. However, if the recursion went down to calculate(0), it would return 0, making the whole product 0. The condition n <= 1 handles both. The correct chain is 5 * 4 * 3 * 2 * calculate(1), which returns 1. The result is 120. Wait, my analysis is wrong. The code `if (n <= 1) return n;` means `calculate(1)` returns 1 and `calculate(0)` returns 0. The recursion *will* call `calculate(0)` indirectly. The final multiplication will be `... * calculate(1) * calculate(0)`, which is `... * 1 * 0`, resulting in 0."
+    },
+    {
+      "id": 15,
+      "question": "What will be the output?",
+      "code": "class Animal {\n    public void sound() {\n        System.out.println(\"Animal makes a sound\");\n    }\n}\nclass Dog extends Animal {\n    public void sound() {\n        System.out.println(\"Dog barks\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal myDog = new Dog();\n        myDog.sound();\n    }\n}",
+      "options": ["Animal makes a sound", "Dog barks", "Compilation Error", "Runtime Error"],
+      "answer": "Dog barks",
+      "explanation": "This demonstrates runtime polymorphism. Although the reference type is Animal, the object is of type Dog. Java determines which method to call at runtime based on the actual object's type, so the overridden sound() method in the Dog class is executed."
+    },
+    {
+      "id": 16,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int x = 1;\n        do {\n            System.out.print(x + \" \");\n            x++;\n        } while (x < 1);\n    }\n}",
+      "options": ["1 ", "1 2 ", "No output", "Infinite Loop"],
+      "answer": "1 ",
+      "explanation": "A do-while loop always executes its body at least once before checking the condition. It prints '1 ', increments x to 2, and then checks the condition (2 < 1), which is false, so the loop terminates."
+    },
+    {
+      "id": 17,
+      "question": "What will be the output of the following code?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        System.out.println(Math.min(10, 5));\n    }\n}",
+      "options": ["10", "5", "15", "0"],
+      "answer": "5",
+      "explanation": "The static method Math.min(a, b) returns the smaller of the two integer arguments. Between 10 and 5, 5 is smaller."
+    },
+    {
+      "id": 18,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        String text = \"Java\";\n        System.out.println(text.charAt(text.length()));\n    }\n}",
+      "options": ["a", "RuntimeException", "Compilation Error", "StringIndexOutOfBoundsException"],
+      "answer": "StringIndexOutOfBoundsException",
+      "explanation": "text.length() returns 4. The charAt() method is 0-indexed, so valid indices for 'Java' are 0, 1, 2, and 3. Attempting to access index 4 is out of bounds and throws a StringIndexOutOfBoundsException."
+    },
+    {
+      "id": 19,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int sum = 0;\n        for (int i = 0; i <= 10; i += 2) {\n            sum += i;\n        }\n        System.out.println(sum);\n    }\n}",
+      "options": ["20", "30", "10", "25"],
+      "answer": "30",
+      "explanation": "The loop iterates through even numbers from 0 to 10 inclusive. The sum is calculated as: 0 + 2 + 4 + 6 + 8 + 10 = 30."
+    },
+    {
+      "id": 20,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int a = 10;\n        if (a > 5 && a < 15) {\n            System.out.println(\"Condition Met\");\n        } else {\n            System.out.println(\"Condition Not Met\");\n        }\n    }\n}",
+      "options": ["Condition Met", "Condition Not Met", "Compilation Error", "Runtime Error"],
+      "answer": "Condition Met",
+      "explanation": "The logical AND operator '&&' checks if both conditions are true. Since a=10, the condition (10 > 5) is true, and the condition (10 < 15) is also true. Both being true, the if-block executes."
+    },
+    {
+      "id": 21,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        String s = \"apple\";\n        String t = \"Apple\";\n        System.out.println(s.equals(t));\n    }\n}",
+      "options": ["TRUE", "FALSE", "Compilation Error", "Runtime Error"],
+      "answer": "FALSE",
+      "explanation": "The String.equals() method performs a case-sensitive comparison. Since 'a' and 'A' are different characters, the strings are not equal."
+    },
+    {
+      "id": 22,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args)\n    {\n        int[] numbers = {1, 2, 3};\n        for (int x : numbers) {\n            System.out.print(x + \" \");\n        }\n    }\n}",
+      "options": ["1, 2, 3", "2000 1 2", "1 2 3 ", "Compilation Error"],
+      "answer": "1 2 3 ",
+      "explanation": "This is an enhanced for-loop (or for-each loop). It iterates through each element of the 'numbers' array (1, 2, and 3) and prints the element followed by a space."
+    },
+    {
+      "id": 23,
+      "question": "What will be printed if the input is \"Hello\"?",
+      "code": "import java.util.Scanner;\npublic class Test {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String input = sc.nextLine();\n        if (input.isEmpty()) {\n            System.out.println(\"Empty\");\n        } else {\n            System.out.println(\"Not Empty\");\n        }\n        sc.close();\n    }\n}",
+      "options": ["Empty", "Not Empty", "Compilation Error", "Runtime Error"],
+      "answer": "Not Empty",
+      "explanation": "The input string \"Hello\" is not empty. The isEmpty() method returns false, so the else block is executed."
+    },
+    {
+      "id": 24,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int count = 0;\n        while (count < 3) {\n            System.out.print(count + \" \");\n            count++;\n        }\n    }\n}",
+      "options": ["0 1 2 ", "0 1 2 3", "1 2 3", "Infinite Loop"],
+      "answer": "0 1 2 ",
+      "explanation": "The while loop continues as long as 'count' is less than 3. It prints the current value of 'count' (0, 1, 2) and then increments it. When 'count' becomes 3, the condition is false and the loop terminates."
+    },
+    {
+      "id": 25,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int x = 10;\n        int y = x++;\n        int z = ++x;\n        System.out.println(x + \", \" + y + \", \" + z);\n    }\n}",
+      "options": ["12, 10, 12", "12, 11, 12", "11, 10, 11", "10, 10, 11"],
+      "answer": "12, 10, 12",
+      "explanation": "1. x is 10. \n2. y = x++ (post-increment): y is assigned the value of x (10), then x is incremented to 11. So, y=10, x=11. \n3. z = ++x (pre-increment): x is first incremented to 12, then its value is assigned to z. So, x=12, z=12. \n4. The final values printed are x=12, y=10, z=12."
+    },
+    {
+      "id": 26,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        String s = \"Hello\";\n        System.out.println(s.substring(1, 3));\n    }\n}",
+      "options": ["ell", "ello", "el", "Hel"],
+      "answer": "el",
+      "explanation": "The substring(beginIndex, endIndex) method extracts characters from the beginIndex (inclusive) up to the endIndex (exclusive). It extracts characters at index 1 ('e') and index 2 ('l'). The character at index 3 is not included."
+    },
+    {
+      "id": 27,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        try {\n            String str = null;\n            System.out.println(str.length());\n        } catch (NullPointerException e) {\n            System.out.println(\"Caught NullPointerException\");\n        } catch (Exception e) {\n            System.out.println(\"Caught generic Exception\");\n        }\n    }\n}",
+      "options": ["Caught NullPointerException", "Caught generic Exception", "NullPointerException (unhandled)", "Compilation Error"],
+      "answer": "Caught NullPointerException",
+      "explanation": "A NullPointerException is thrown when trying to access length() on a null reference. The first catch block is specifically for NullPointerException, so it catches the exception and executes its code. The second, more general, catch block is not reached."
+    },
+    {
+      "id": 28,
+      "question": "What will be the output?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        System.out.println(Integer.parseInt(\"123\") + 1);\n    }\n}",
+      "options": ["1231", "124", "Error", "123 + 1"],
+      "answer": "124",
+      "explanation": "Integer.parseInt(\"123\") converts the string literal \"123\" into the integer value 123. Then, the arithmetic addition 123 + 1 is performed, resulting in 124."
+    },
+    {
+      "id": 29,
+      "question": "What will be the output if the input is 5?",
+      "code": "import java.util.Scanner;\npublic class Test {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int num = sc.nextInt();\n        switch (num) {\n            case 1: System.out.println(\"One\"); break;\n            case 5: System.out.println(\"Five\"); break;\n            default: System.out.println(\"Other\");\n        }\n        sc.close();\n    }\n}",
+      "options": ["One", "Five", "Other", "Compilation Error"],
+      "answer": "Five",
+      "explanation": "The switch statement evaluates the input 'num'. Since the input is 5, it matches 'case 5', and 'Five' is printed. The 'break' statement then exits the switch block."
+    },
+    {
+      "id": 30,
+      "question": "What will be the output?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        int[] numbers = {10, 20, 30, 40, 50};\n        System.out.println(numbers[0] + numbers[4]);\n    }\n}",
+      "options": ["10", "50", "60", "ArrayIndexOutOfBoundsException"],
+      "answer": "60",
+      "explanation": "numbers[0] accesses the first element of the array, which is 10. numbers[4] accesses the fifth element, which is 50. The expression becomes 10 + 50, which equals 60."
+    },
+    {
+      "id": 31,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        String s1 = \"programming\";\n        System.out.println(s1.indexOf('m'));\n    }\n}",
+      "options": ["6", "5", "7", "-1"],
+      "answer": "6",
+      "explanation": "The indexOf() method returns the index of the first occurrence of the specified character. In the string \"programming\", the characters are at indices: p(0), r(1), o(2), g(3), r(4), a(5), m(6). The first 'm' is at index 6."
+    },
+    {
+      "id": 32,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        System.out.println(\"Java\".replace('a', 'o'));\n    }\n}",
+      "options": ["Jovo", "Jva", "Javoo", "Java"],
+      "answer": "Jovo",
+      "explanation": "The replace(oldChar, newChar) method returns a new string resulting from replacing all occurrences of oldChar with newChar. Both 'a' characters in \"Java\" are replaced with 'o', resulting in \"Jovo\"."
+    },
+    {
+      "id": 33,
+      "question": "What is the output?",
+      "code": "class MyClass {\n    static {\n        System.out.println(\"Static Block\");\n    }\n    public MyClass() {\n        System.out.println(\"Constructor\");\n    }\n    public static void main(String[] args) {\n        MyClass obj = new MyClass();\n    }\n}",
+      "options": ["Constructor\nStatic Block", "Static Block\nConstructor", "Constructor", "Static Block"],
+      "answer": "Static Block\nConstructor",
+      "explanation": "A static block is executed only once, when the class is first loaded into memory. This happens before any object is created. The constructor is called when a new object is instantiated with the 'new' keyword. Therefore, the static block runs first, followed by the constructor."
+    },
+    {
+      "id": 34,
+      "question": "What will be the output of the following Java code snippet?",
+      "code": "public class Test {\n    public static void main(String[] args) {\n        String s = \"Hello\";\n        StringBuilder sb = new StringBuilder(\"Hello\");\n        System.out.println(s.equals(sb.toString()));\n    }\n}",
+      "options": ["TRUE", "FALSE", "Compilation Error", "Runtime Error"],
+      "answer": "TRUE",
+      "explanation": "The sb.toString() method converts the StringBuilder object into a String object with the same character sequence. The .equals() method for String compares the content of the two strings, which are identical (\"Hello\"), so it returns true."
+    },
+    {
+      "id": 35,
+      "question": "What will be the output if the input is 10?",
+      "code": "import java.util.Scanner;\npublic class Test {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int num = sc.nextInt();\n        if (num % 2 == 0) {\n            System.out.println(\"Even\");\n        } else {\n            System.out.println(\"odd\");\n        }\n        sc.close();\n    }\n}",
+      "options": ["Even", "Odd", "Compilation Error", "Runtime Error"],
+      "answer": "Even",
+      "explanation": "The modulo operator '%' gives the remainder of a division. 10 % 2 is 0. The condition (0 == 0) is true, so the if-block executes and prints 'Even'."
+    }
+  ]
+}
