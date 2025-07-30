@@ -4,279 +4,363 @@
   "questions": [
     {
       "id": 1,
-      "question": "Select the valid statement.",
+      "question": "### Array Declaration\nSelect the **valid** statement to declare and instantiate an array.",
       "options": [
-        "char[] ch = new char(5);",
-        "char[] ch = new char[5];",
-        "char[] ch = new char[];",
-        "char[] ch = new char[];"
+        "`char[] ch = new char(5);`",
+        "`char[] ch = new char[5];`",
+        "`char[] ch = new char[];`",
+        "`char ch[] = new char;`"
       ],
-      "answer": "char[] ch = new char[5];",
-      "explanation": "In Java, the correct syntax to instantiate an array requires specifying its size within square brackets `[]`. Using parentheses `()` or omitting the size is syntactically incorrect."
+      "answer": "`char[] ch = new char[5];`",
+      "explanation": "In Java, the correct syntax to instantiate an array requires specifying its size within square brackets `[]`. \n\n- Using parentheses `()` like a constructor is incorrect.\n- Omitting the size is only allowed during inline initialization (e.g., `new char[]{'a','b'}`)."
     },
     {
       "id": 2,
-      "question": "What is the size of float and double in Java?",
+      "question": "### Data Types\nWhat is the size (in bits) of `float` and `double` in Java?",
       "options": [
-        "32 and 64",
-        "32 and 32",
-        "64 and 64",
-        "64 and 32"
+        "`32` and `64`",
+        "`32` and `32`",
+        "`64` and `64`",
+        "`64` and `32`"
       ],
-      "answer": "32 and 64",
-      "explanation": "In Java, a `float` is a 32-bit single-precision floating-point number, and a `double` is a 64-bit double-precision floating-point number."
+      "answer": "`32` and `64`",
+      "explanation": "In Java, a `float` is a **32-bit** single-precision floating-point number, and a `double` is a **64-bit** double-precision floating-point number, as defined by the IEEE 754 standard."
     },
     {
       "id": 3,
-      "question": "Automatic type conversion is not possible in which case?",
+      "question": "### Type Casting\nAutomatic type conversion is **not** possible in which of the following cases?",
       "options": [
-        "Byte to int",
-        "Int to long",
-        "Long to int",
-        "Short to int"
+        "`Byte` to `int`",
+        "`Int` to `long`",
+        "`Long` to `int`",
+        "`Short` to `int`"
       ],
-      "answer": "Long to int",
-      "explanation": "Automatic type conversion (widening) is only possible from a smaller data type to a larger one. Converting a `long` (64 bits) to an `int` (32 bits) is a narrowing conversion and requires an explicit cast, as it can lead to data loss."
+      "answer": "`Long` to `int`",
+      "explanation": "Automatic type conversion (widening) is only possible from a smaller data type to a larger one. Converting a `long` (64 bits) to an `int` (32 bits) is a **narrowing conversion** and requires an explicit cast, as it can lead to data loss.\n```java\nlong myLong = 100L;\n// int myInt = myLong; // Compilation Error!\nint myInt = (int) myLong; // Correct (explicit cast)\n```"
     },
     {
       "id": 4,
-      "question": "Number of primitive data types in Java are?",
-      "options": ["6", "7", "8", "9"],
-      "answer": "8",
-      "explanation": "Java has eight primitive data types: `byte`, `short`, `int`, `long`, `float`, `double`, `boolean`, and `char`."
+      "question": "### Data Types\nHow many **primitive** data types are there in Java?",
+      "options": [
+        "`6`",
+        "`7`",
+        "`8`",
+        "`9`"
+      ],
+      "answer": "`8`",
+      "explanation": "Java has exactly **8** primitive data types:\n- `byte`\n- `short`\n- `int`\n- `long`\n- `float`\n- `double`\n- `boolean`\n- `char`\n\n`String` is a common point of confusion, but it is a class (an object), not a primitive type."
     },
     {
       "id": 5,
-      "question": "Predict the output of the program: String str = \"I like JAVA\"; System.out.println(str.length());",
-      "options": ["12", "11", "10", "9"],
-      "answer": "11",
-      "explanation": "The `length()` method of a String returns the total number of characters, including spaces. The string \"I like JAVA\" contains 11 characters."
+      "question": "### Strings\nPredict the output of the following program:\n```java\nString str = \"I like JAVA\";\nSystem.out.println(str.length());\n```",
+      "options": [
+        "`12`",
+        "`11`",
+        "`10`",
+        "`9`"
+      ],
+      "answer": "`11`",
+      "explanation": "The `length()` method of a `String` returns the total number of characters, including spaces. The string `\"I like JAVA\"` contains **11** characters."
     },
     {
       "id": 6,
-      "question": "Predict the output of the program: String s[] = {\"hybernate\", \"java\", \"object\"}; Arrays.sort(s); for(String k: s) {System.out.println(k); }",
+      "question": "### Arrays & Sorting\nPredict the output of the following program:\n```java\nimport java.util.Arrays;\n\npublic class Test {\n    public static void main(String[] args) {\n        String s[] = {\"hybernate\", \"java\", \"object\"};\n        Arrays.sort(s);\n        for(String k: s) {\n            System.out.print(k + \" \");\n        }\n    }\n}\n```",
       "options": [
-        "java hybernate object",
-        "hybernate java object",
-        "hybernate object java",
-        "object java hibernate"
+        "`hybernate java object `",
+        "`java hybernate object `",
+        "`hybernate object java `",
+        "`object java hibernate `"
       ],
-      "answer": "hybernate java object",
-      "explanation": "`Arrays.sort()` sorts strings lexicographically (alphabetically). The order will be 'hybernate', 'java', 'object'. The for-each loop prints each sorted string. The option represents the sequence of printed items."
+      "answer": "`hybernate java object `",
+      "explanation": "`Arrays.sort()` sorts strings lexicographically (alphabetically). The order will be 'hybernate', 'java', 'object'. The for-each loop then prints each sorted string followed by a space."
     },
     {
       "id": 7,
-      "question": "Object includes?",
-      "options": ["Attributes", "Behaviour", "Both", "None"],
-      "answer": "Both",
-      "explanation": "In OOP, an object is defined by its state (attributes/properties) and its behavior (methods/functions)."
+      "question": "### OOP Concepts\nAn object in Java encapsulates:",
+      "options": [
+        "`Attributes (State)`",
+        "`Behaviour (Methods)`",
+        "`Both Attributes and Behaviour`",
+        "`Global Functions`"
+      ],
+      "answer": "`Both Attributes and Behaviour`",
+      "explanation": "In Object-Oriented Programming, an object is defined by its **state** (stored in attributes/fields) and its **behavior** (implemented in methods/functions)."
     },
     {
       "id": 8,
-      "question": "_____ is also known as a static variable.",
+      "question": "### Keywords\nA variable declared with the `static` keyword is also known as a:",
       "options": [
-        "class variable",
-        "instance variable",
-        "local variable",
-        "all of the above"
+        "`class variable`",
+        "`instance variable`",
+        "`local variable`",
+        "`method variable`"
       ],
-      "answer": "class variable",
-      "explanation": "A variable declared with the `static` keyword belongs to the class itself, not to any specific instance. Hence, it is also known as a class variable."
+      "answer": "`class variable`",
+      "explanation": "A variable declared with the `static` keyword belongs to the class itself, not to any specific instance. Hence, it is also known as a **class variable**. All instances of the class share this one variable."
     },
     {
       "id": 9,
-      "question": "Predict the output of the program: char ch = 127; ch++; System.out.println(ch + \"=\" + (int)ch);",
+      "question": "### Type Behavior\nPredict the output of the program:\n```java\nchar ch = 127;\nch++;\nSystem.out.println(ch + \"=\" + (int)ch);\n```",
       "options": [
-        "compilation error",
-        "? = 128",
-        "garbage value = -128",
-        "none of the above"
+        "`Compilation error`",
+        "`? = 128`",
+        "` = -128`",
+        "`128 = 128`"
       ],
-      "answer": "? = 128",
-      "explanation": "The `char` value 127 is incremented to 128. The character representation of ASCII 128 is not a standard printable character and often appears as '?'. The integer cast `(int)ch` correctly prints its numeric value, 128."
+      "answer": "`? = 128`",
+      "explanation": "The `char` value `127` is incremented to `128`. The character representation for ASCII `128` is not a standard printable character and often appears as `?`. The integer cast `(int)ch` correctly prints its numeric value, which is `128`."
     },
     {
       "id": 10,
-      "question": "Tick the correct one:",
+      "question": "### Java Ecosystem\nWhich of the following statements is correct?",
       "options": [
-        "JVM converts bytecode into machine-level code",
-        "JVM is platform-dependent",
-        "All of these",
-        "Java is platform-independent"
+        "`JVM converts bytecode into machine-level code`",
+        "`JVM is platform-dependent`",
+        "`Java is platform-independent`",
+        "`All of the above`"
       ],
-      "answer": "All of these",
-      "explanation": "All statements are true. Java is platform-independent because its bytecode runs on any platform-dependent JVM, which in turn converts the bytecode to native machine code."
+      "answer": "`All of the above`",
+      "explanation": "All statements are true:\n- **Java is platform-independent** because its bytecode runs on any JVM.\n- The **JVM is platform-dependent**; a specific JVM is needed for each OS.\n- The **JVM converts bytecode** into native machine code for the host system."
     },
     {
       "id": 11,
-      "question": "Which is not the correct declaration?",
-      "options": ["int a_1", "int 1_a", "int A1", "None"],
-      "answer": "int 1_a",
-      "explanation": "In Java, a variable name (identifier) cannot begin with a number. It must start with a letter, underscore (_), or dollar sign ($)."
+      "question": "### Identifiers\nWhich of the following is an **invalid** variable declaration in Java?",
+      "options": [
+        "`int a_1;`",
+        "`int 1_a;`",
+        "`int $A1;`",
+        "`int _a1;`"
+      ],
+      "answer": "`int 1_a;`",
+      "explanation": "In Java, a variable name (identifier) **cannot** begin with a number. It must start with a letter, an underscore (`_`), or a dollar sign (`$`)."
     },
     {
       "id": 12,
-      "question": "Which operator gives a result if no condition satisfies?",
-      "options": ["IN", "OR", "NOT", "AND"],
-      "answer": "NOT",
-      "explanation": "The logical NOT `!` operator inverts a boolean value. If a condition is false, applying NOT makes it true. The question implies reversing a failed condition."
+      "question": "### Operators\nWhich logical operator inverts the result of a boolean condition?",
+      "options": [
+        "`!` (Logical NOT)",
+        "`||` (Logical OR)",
+        "`!=` (Not Equal To)",
+        "`&&` (Logical AND)"
+      ],
+      "answer": "`!` (Logical NOT)",
+      "explanation": "The logical NOT `!` operator inverts a boolean value. If a condition is `true`, `!condition` becomes `false`, and vice-versa. It effectively reverses the outcome of a boolean expression."
     },
     {
       "id": 13,
-      "question": "To find the length of the string:",
-      "options": ["a.length;", "a.length();"],
-      "answer": "a.length();",
-      "explanation": "`length()` is a method of the String class and requires parentheses `()` for invocation. In contrast, `length` without parentheses is a property used for arrays."
+      "question": "### Strings vs. Arrays\nWhich syntax is used to find the length of a `String` object named `a`?",
+      "options": [
+        "`a.length();`",
+        "`a.length;`",
+        "`a.size();`",
+        "`length(a);`"
+      ],
+      "answer": "`a.length();`",
+      "explanation": "`length()` is a **method** of the `String` class and requires parentheses `()`.\n- `a.length` (a property) is used for **arrays**.\n- `a.size()` is a method for **Collections** like `ArrayList`."
     },
     {
       "id": 14,
-      "question": "Which is not an OOP concept?",
-      "options": ["Compilation", "Polymorphism", "Encapsulation", "Inheritance"],
-      "answer": "Compilation",
-      "explanation": "Polymorphism, Encapsulation, and Inheritance are core principles of Object-Oriented Programming. Compilation is a general process in programming that translates source code to machine-readable code."
+      "question": "### OOP Concepts\nWhich of the following is **not** a core concept of Object-Oriented Programming (OOP)?",
+      "options": [
+        "`Compilation`",
+        "`Polymorphism`",
+        "`Encapsulation`",
+        "`Inheritance`"
+      ],
+      "answer": "`Compilation`",
+      "explanation": "`Polymorphism`, `Encapsulation`, and `Inheritance` are the core principles of OOP. `Compilation` is a general process in programming that translates source code to machine-readable code and is not exclusive to OOP."
     },
     {
       "id": 15,
-      "question": "What is the extension of Java code files?",
-      "options": [".Java", ".class", "Both 1 and 2", ".txt"],
-      "answer": ".Java",
-      "explanation": "Java source code is written in files with a `.java` extension. After compilation, the bytecode is stored in files with a `.class` extension."
+      "question": "### File Extensions\nWhat is the file extension for Java **source code** files?",
+      "options": [
+        "`.java`",
+        "`.class`",
+        "`.jar`",
+        "`.txt`"
+      ],
+      "answer": "`.java`",
+      "explanation": "Java source code is written in files with a **`.java`** extension. After compilation, the bytecode is stored in files with a **`.class`** extension."
     },
     {
       "id": 16,
-      "question": "Which among the following falls under key elements of programming?",
+      "question": "### Programming Skills\nWhich of the following is considered a key element of programming proficiency?",
       "options": [
-        "Good analytical skills",
-        "Declarative knowledge",
-        "Imperative knowledge",
-        "Abstraction knowledge in programming",
-        "All of these"
+        "`Good analytical skills`",
+        "`Declarative knowledge (What to do)`",
+        "`Imperative knowledge (How to do)`",
+        "`All of the above`"
       ],
-      "answer": "All of these",
-      "explanation": "Successful programming requires a mix of problem-solving skills (analytical), knowing 'what' to do (declarative), knowing 'how' to do it (imperative), and managing complexity (abstraction)."
+      "answer": "`All of the above`",
+      "explanation": "Successful programming requires a mix of problem-solving skills (`analytical`), knowing 'what' to do (`declarative`), knowing 'how' to do it (`imperative`), and managing complexity (`abstraction`)."
     },
     {
       "id": 17,
-      "question": "Given the code snippet: static int a = 1; void Inc() { a++; System.out.println(a); } Inc(); Inc();",
-      "options": ["1,1", "1,2", "2,3", "2,2"],
-      "answer": "2,3",
-      "explanation": "The variable `a` is static, so its value is shared and persists across method calls. First call: `a` becomes 2, prints 2. Second call: `a` becomes 3, prints 3."
+      "question": "### Static Variables\nGiven a class with a static variable `a`, predict the output of calling `Inc()` twice.\n```java\nclass MyClass {\n    static int a = 1;\n    static void Inc() {\n        a++;\n        System.out.println(a);\n    }\n}\n\n// In main method:\nMyClass.Inc();\nMyClass.Inc();\n```",
+      "options": [
+        "`1` then `1`",
+        "`1` then `2`",
+        "`2` then `3`",
+        "`2` then `2`"
+      ],
+      "answer": "`2` then `3`",
+      "explanation": "The variable `a` is `static`, so its value is shared and persists across method calls.\n- **First call**: `a` becomes `2`, prints `2`.\n- **Second call**: `a` becomes `3`, prints `3`."
     },
     {
       "id": 18,
-      "question": "Identify the correct definition of a package.",
+      "question": "### Packages\nIdentify the most accurate definition of a Java `package`.",
       "options": [
-        "A package is a collection of editing tools",
-        "A package is a collection of classes",
-        "A package is a collection of classes and interfaces",
-        "A package is a collection of interfaces"
+        "`A package is a collection of editing tools`",
+        "`A package is a collection of classes`",
+        "`A package is a collection of classes, interfaces, enums, and annotations`",
+        "`A package is a collection of interfaces`"
       ],
-      "answer": "A package is a collection of classes and interfaces",
-      "explanation": "A Java package is a mechanism for organizing related classes and interfaces into a single namespace to prevent naming conflicts and control access."
+      "answer": "`A package is a collection of classes, interfaces, enums, and annotations`",
+      "explanation": "A Java `package` is a namespace that organizes a set of related types, including **classes, interfaces, enums, and annotations**, to prevent naming conflicts and control access."
     },
     {
       "id": 19,
-      "question": "In which of the following is the toString() method defined?",
-      "options": ["java.lang.Object", "java.lang.String", "java.util", "None"],
-      "answer": "java.lang.Object",
-      "explanation": "The `toString()` method is fundamentally defined in the `java.lang.Object` class, which is the root of the class hierarchy. All other classes inherit this method."
+      "question": "### Object Class\nIn which core Java class is the `toString()` method originally defined?",
+      "options": [
+        "`java.lang.Object`",
+        "`java.lang.String`",
+        "`java.util.AbstractCollection`",
+        "`java.lang.Class`"
+      ],
+      "answer": "`java.lang.Object`",
+      "explanation": "The `toString()` method is fundamentally defined in the `java.lang.Object` class. Since `Object` is the root of the class hierarchy, all other classes in Java inherit this method."
     },
     {
       "id": 20,
-      "question": "Arrays in Java are:",
-      "options": ["Object references", "Objects", "Primitive data type", "None"],
-      "answer": "Objects",
-      "explanation": "In Java, arrays are objects. They reside on the heap and are treated as objects, inheriting methods from the `Object` class."
+      "question": "### Arrays\nIn the Java language, arrays are considered to be:",
+      "options": [
+        "`Object references`",
+        "`Objects`",
+        "`Primitive data types`",
+        "`A special type of collection`"
+      ],
+      "answer": "`Objects`",
+      "explanation": "In Java, arrays are **objects**. They reside on the heap, have a `length` property, and inherit methods from the `java.lang.Object` class."
     },
     {
       "id": 21,
-      "question": "Select the valid statement to declare and initialize an array.",
+      "question": "### Array Initialization\nSelect the valid shorthand statement to declare and initialize an integer array.",
       "options": [
-        "int[] A = 0;",
-        "int[] A = [1,2,3];",
-        "int[] A = (1,2,3);",
-        "int[] A = {1,2,3};"
+        "`int[] A = 0;`",
+        "`int[] A = [1,2,3];`",
+        "`int[] A = (1,2,3);`",
+        "`int[] A = {1,2,3};`"
       ],
-      "answer": "int[] A = {1,2,3};",
+      "answer": "`int[] A = {1,2,3};`",
       "explanation": "The correct shorthand syntax for declaring and initializing an array in a single statement is by enclosing the elements in curly braces `{}`."
     },
     {
       "id": 22,
-      "question": "What is the output of the following code? public static void main(String[] args) {int var1 = 1; if (var1) System.out.println(\"Inside If Condition\");}",
+      "question": "### Conditional Statements\nWhat is the output of the following code?\n```java\npublic static void main(String[] args) {\n    int var1 = 1;\n    if (var1) {\n        System.out.println(\"Inside If Condition\");\n    }\n}\n```",
       "options": [
-        "Inside If Condition",
-        "Does not print anything",
-        "Compilation error",
-        "Runtime error"
+        "`Prints 'Inside If Condition'`",
+        "`Does not print anything`",
+        "`Compilation error`",
+        "`Runtime error`"
       ],
-      "answer": "Compilation error",
-      "explanation": "The `if` statement in Java requires a boolean expression. An integer `var1` cannot be used as a condition, unlike in C/C++. This results in a 'type mismatch' compilation error."
+      "answer": "`Compilation error`",
+      "explanation": "The `if` statement in Java requires a **boolean** expression. An integer `var1` cannot be used as a condition, unlike in C/C++. This results in a 'type mismatch' **compilation error**."
     },
     {
       "id": 23,
-      "question": "What is the output of the following code? import java.util.Scanner; public class Solution { private String name = \"TATA\"; public static void main(String[] args) {Solution t = (Solution) new Object(); System.out.println(t.name); } }",
-      "options": ["Runtime error", "TATA", "Compile error", "None of the above"],
-      "answer": "Runtime error",
-      "explanation": "The code compiles but will throw a `java.lang.ClassCastException` at runtime. An object of the superclass `Object` cannot be cast down to its subclass `Solution`."
+      "question": "### Type Casting\nWhat is the output of the following code?\n```java\npublic class Solution {\n    private String name = \"TATA\";\n    public static void main(String[] args) {\n        Solution t = (Solution) new Object();\n        System.out.println(t.name);\n    }\n}\n```",
+      "options": [
+        "`Runtime error`",
+        "`TATA`",
+        "`Compilation error`",
+        "`No output`"
+      ],
+      "answer": "`Runtime error`",
+      "explanation": "The code compiles, but will throw a `java.lang.ClassCastException` at runtime. An object of the superclass `Object` cannot be cast down to its subclass `Solution`."
     },
     {
       "id": 24,
-      "question": "If a package name contains more than one word, the words must be separated by...",
-      "options": ["Comma", "Dot", "Hyphen", "underscore"],
-      "answer": "Dot",
-      "explanation": "Java package names follow a hierarchical structure where levels are separated by a dot (`.`). This is the standard convention (e.g., `java.util.Scanner`)."
+      "question": "### Packages\nIf a package name contains more than one word, the words must be separated by a...",
+      "options": [
+        "`Comma (,)`",
+        "`Dot (.)`",
+        "`Hyphen (-)`",
+        "`Underscore (_)`"
+      ],
+      "answer": "`Dot (.)`",
+      "explanation": "Java package names follow a hierarchical structure where levels are separated by a **dot (`.`)**. This is the standard convention (e.g., `java.util.Scanner`)."
     },
     {
       "id": 25,
-      "question": "What is the output of the following code? {int var1; if (var1 == 0)System.out.println(\"Inside If Condition\");}",
+      "question": "### Variable Initialization\nWhat is the output of the following code?\n```java\nint var1;\nif (var1 == 0) {\n    System.out.println(\"Inside If Condition\");\n}\n```",
       "options": [
-        "Inside If Condition",
-        "Does not print anything",
-        "Compilation error",
-        "Runtime error"
+        "`Prints 'Inside If Condition'`",
+        "`Does not print anything`",
+        "`Compilation error`",
+        "`Runtime error`"
       ],
-      "answer": "Compilation error",
-      "explanation": "The local variable `var1` is declared but not initialized. Attempting to read its value to compare it with 0 results in a compilation error: 'variable var1 might not have been initialized'."
+      "answer": "`Compilation error`",
+      "explanation": "The local variable `var1` is declared but not initialized. Attempting to read its value results in a **compilation error**: 'variable `var1` might not have been initialized'."
     },
     {
       "id": 26,
-      "question": "Which modifier can be used to prevent any method or attribute from being visible to external classes?",
-      "options": ["Private", "Public", "Protected", "Default"],
-      "answer": "Private",
-      "explanation": "The `private` access modifier ensures that a member is accessible only within its own class, providing the highest level of encapsulation and hiding it from all external classes."
+      "question": "### Access Modifiers\nWhich modifier prevents any method or attribute from being visible to **any** external class?",
+      "options": [
+        "`private`",
+        "`public`",
+        "`protected`",
+        "`default`"
+      ],
+      "answer": "`private`",
+      "explanation": "The `private` access modifier ensures that a member is accessible **only** within its own class, providing the highest level of encapsulation."
     },
     {
       "id": 27,
-      "question": "Which modifier can be used to restrict a method or attribute from being visible outside its package?",
+      "question": "### Access Modifiers\nWhich modifier restricts a member from being visible outside its package, but allows visibility to subclasses in other packages?",
       "options": [
-        "Private",
-        "Public",
-        "Protected",
-        "Default (No modifier)"
+        "`private`",
+        "`public`",
+        "`protected`",
+        "`default` (no modifier)"
       ],
-      "answer": "Default (No modifier)",
-      "explanation": "When no access modifier is specified, the member has 'default' or 'package-private' visibility. It is visible to all classes within the same package but not to any class outside the package."
+      "answer": "`protected`",
+      "explanation": "The `protected` modifier makes a member visible to all classes in the same package and to subclasses in different packages. `default` visibility is restricted only to the same package."
     },
     {
       "id": 28,
-      "question": "Which of these cannot be used as a variable name in Java?",
-      "options": ["Identifier & Keyword", "Keyword", "Identifier", "None of these"],
-      "answer": "Keyword",
-      "explanation": "Keywords are reserved words in Java (e.g., `public`, `static`, `if`) that have special meaning to the compiler and cannot be used as names for variables, methods, or classes."
+      "question": "### Identifiers\nWhich of these cannot be used as an identifier (e.g., a variable name) in Java?",
+      "options": [
+        "`A keyword (e.g., if)`",
+        "`An identifier (e.g., myVar)`",
+        "`A name starting with '$'`",
+        "`A name containing numbers`"
+      ],
+      "answer": "`A keyword (e.g., if)`",
+      "explanation": "**Keywords** (or reserved words) like `public`, `static`, and `if` have special meaning to the compiler and cannot be used as identifiers."
     },
     {
       "id": 29,
-      "question": "Which component is used to compile, debug, and execute a Java program?",
-      "options": ["JIT", "JRE", "JVM", "JDK"],
-      "answer": "JDK",
-      "explanation": "The Java Development Kit (JDK) is the complete software package for developing Java applications. It includes the compiler (`javac`), debugger, and the Java Runtime Environment (JRE) to execute the code."
+      "question": "### Java Ecosystem\nWhich component is used to **compile, debug, and execute** a Java program?",
+      "options": [
+        "`JIT`",
+        "`JRE`",
+        "`JVM`",
+        "`JDK`"
+      ],
+      "answer": "`JDK`",
+      "explanation": "The **Java Development Kit (JDK)** is the complete package for developing Java applications. It includes the compiler (`javac`), debugger, and the Java Runtime Environment (`JRE`) to execute the code."
     },
     {
       "id": 30,
-      "question": "What is the extension of compiled Java classes?",
-      "options": [".Java", ".txt", ".class", ".exe"],
-      "answer": ".class",
-      "explanation": "The Java compiler (`javac`) compiles `.java` source files into platform-independent bytecode, which is stored in files with a `.class` extension."
+      "question": "### File Extensions\nWhat is the file extension of **compiled** Java class files?",
+      "options": [
+        "`.java`",
+        "`.jar`",
+        "`.class`",
+        "`.exe`"
+      ],
+      "answer": "`.class`",
+      "explanation": "The Java compiler (`javac`) compiles `.java` source files into platform-independent bytecode, which is stored in files with a **`.class`** extension."
     }
   ]
 }
