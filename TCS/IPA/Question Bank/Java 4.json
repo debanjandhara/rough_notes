@@ -1,0 +1,181 @@
+{
+  "title": "TCS IPA JAVA MCQs (Part - II)",
+  "description": "A collection of multiple-choice questions about core Java concepts, based on the video.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the required data type for expression1 in the ternary operator `expression1 ? expression2 : expression3`?",
+      "options": ["Float", "Integer", "Boolean", "String"],
+      "answer": "Boolean",
+      "explanation": "The ternary operator (`? :`) requires its first operand (`expression1`) to be an expression that evaluates to a boolean value (true or false). If true, the entire operation returns `expression2`; otherwise, it returns `expression3`."
+    },
+    {
+      "id": 2,
+      "question": "Which of these keywords can be used to prevent inheritance of a class?",
+      "options": ["Constant", "Class", "Super", "Final"],
+      "answer": "Final",
+      "explanation": "In Java, the `final` keyword, when applied to a class declaration, prevents the class from being subclassed. This is useful for creating immutable classes or for security reasons."
+    },
+    {
+      "id": 3,
+      "question": "Which of these is the superclass of every class in Java?",
+      "options": ["String class", "Object class", "Abstract class", "ArrayList class"],
+      "answer": "Object class",
+      "explanation": "The `java.lang.Object` class is the root of the class hierarchy. Every class has `Object` as a superclass. All other classes inherit the methods of this class, either directly or indirectly."
+    },
+    {
+      "id": 4,
+      "question": "Which of these is a long data type literal?",
+      "options": ["0x99fffa", "0x99fffL", "99671246", "99671246L"],
+      "answer": "0x99fffL",
+      "explanation": "To define a number as a `long` literal, you must append the suffix `L` or `l`. Both `0x99fffL` (hexadecimal) and `99671246L` (decimal) are correct long literals. The other options are integer literals."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is correct about JVM?",
+      "options": ["JVM is responsible for converting bytecode to machine-specific code", "JVM is platform-dependent and provides core Java functionality", "Both a and b", "None of these"],
+      "answer": "Both a and b",
+      "explanation": "The Java Virtual Machine (JVM) is an abstract machine. Its implementation is platform-dependent (different for Windows, Linux, etc.), and its primary role is to load, verify, and execute Java bytecode by converting it into native machine code."
+    },
+    {
+      "id": 6,
+      "question": "What is the output of the following code? \nimport java.util.Scanner;\npublic class Solution {\n  public static void main(String[] args) {\n    double d1 = 50; float d2 = 10;\n    float d3 = d1 / d2;\n    System.out.println(d3);\n  }\n}",
+      "options": ["Runtime error", "5.0", "Compile error", "5.0f"],
+      "answer": "Compile error",
+      "explanation": "In the expression `d1 / d2`, the `float` d2 is promoted to a `double` to match d1. The result of the division is a `double`. You cannot assign a `double` (64-bit) to a `float` variable (32-bit) without an explicit cast (`(float)`), as it's a potential lossy conversion. This causes a compile-time error."
+    },
+    {
+      "id": 7,
+      "question": "Strings in Java are mutable.",
+      "options": ["True", "False"],
+      "answer": "False",
+      "explanation": "String objects in Java are immutable. This means once a String object is created, its value cannot be changed. Operations that seem to modify a string actually create and return a new String object. For mutable strings, use `StringBuilder` or `StringBuffer`."
+    },
+    {
+      "id": 8,
+      "question": "What is Runnable?",
+      "options": ["Abstract class", "Interface", "Class", "Method"],
+      "answer": "Interface",
+      "explanation": "`Runnable` is a functional interface in the `java.lang` package. It is designed to be implemented by any class whose instances are intended to be executed by a thread. It has a single abstract method: `run()`."
+    },
+    {
+      "id": 9,
+      "question": "What is the output of the following code? \nimport java.util.Scanner;\npublic class Solution {\n  public static void main(String[] args) {\n    byte b = 200;\n    System.out.println(b);\n  }\n}",
+      "options": ["200", "Compile error", "Runtime error", "-127"],
+      "answer": "Compile error",
+      "explanation": "The `byte` data type in Java is an 8-bit signed integer with a range from -128 to 127. The literal value 200 is outside this range, so the compiler flags this as an error due to 'possible lossy conversion from int to byte'."
+    },
+    {
+      "id": 10,
+      "question": "Which one of the following is not a Java feature?",
+      "options": ["Object-oriented", "Use of pointers", "Portable", "Dynamic and Extensible"],
+      "answer": "Use of pointers",
+      "explanation": "Java does not support explicit pointers that can be manipulated by the programmer (like in C/C++). It manages memory automatically using references, which eliminates a common source of bugs and security vulnerabilities."
+    },
+    {
+      "id": 11,
+      "question": "Which environment variable is used to set the java path?",
+      "options": ["MAVEN_Path", "JavaPATH", "JAVA", "JAVA_HOME"],
+      "answer": "JAVA_HOME",
+      "explanation": "`JAVA_HOME` is the standard environment variable that points to the installation directory of the JDK. Many Java-based applications and build tools use this variable to find the necessary Java binaries and libraries."
+    },
+    {
+      "id": 12,
+      "question": "What is not the use of the 'this' keyword in Java?",
+      "options": ["Referring to the instance variable when a local variable has the same name", "Passing itself to the method of the same class", "Passing itself to another method", "Calling another constructor in constructor chaining"],
+      "answer": "Passing itself to the method of the same class",
+      "explanation": "This question is technically flawed as all listed options are valid uses of the `this` keyword. The `this` reference can be passed as an argument to any method, including one in the same class. However, in the context of a test, this might be considered the 'least distinct' use, as it's a specific case of 'Passing itself to another method'."
+    },
+    {
+      "id": 13,
+      "question": "Which of the following is a type of polymorphism in Java Programming?",
+      "options": ["Multiple polymorphism", "Compile time polymorphism", "Multilevel polymorphism", "Execution time polymorphism"],
+      "answer": "Compile time polymorphism",
+      "explanation": "Java supports two types of polymorphism: Compile-time (static) polymorphism, achieved via method overloading, and Runtime (dynamic) polymorphism, achieved via method overriding. 'Multilevel' and 'Multiple' refer to types of inheritance."
+    },
+    {
+      "id": 14,
+      "question": "What will be the error in the following Java code? \n`byte b = 50; b = b * 50;`",
+      "options": ["b cannot contain value 50", "b cannot contain value 100, limited by its range", "No error in this code", "* operator has converted b * 50 into int, which can not be converted to byte without casting"],
+      "answer": "* operator has converted b * 50 into int, which can not be converted to byte without casting",
+      "explanation": "In Java arithmetic operations, operands smaller than `int` (like `byte`, `short`) are promoted to `int`. The result of `b * 50` is an `int` (2500). Assigning this `int` back to a `byte` variable requires an explicit cast, e.g., `b = (byte)(b * 50);`, otherwise a compile-time error occurs."
+    },
+    {
+      "id": 15,
+      "question": "Which of these are selection statements in Java?",
+      "options": ["break", "continue", "for()", "if()"],
+      "answer": "if()",
+      "explanation": "Selection statements choose different paths of execution. In Java, these are `if`, `if-else`, and `switch`. `for()` is an iteration statement, while `break` and `continue` are jump statements."
+    },
+    {
+      "id": 16,
+      "question": "Which exception is thrown when java is out of memory?",
+      "options": ["MemoryError", "OutOfMemoryError", "MemoryOutOfBoundsException", "MemoryFullException"],
+      "answer": "OutOfMemoryError",
+      "explanation": "`java.lang.OutOfMemoryError` is a subclass of `Error` thrown when the JVM cannot allocate more memory from the heap. This is a critical error that applications are not expected to recover from."
+    },
+    {
+      "id": 17,
+      "question": "What will be the output of the following Java program? \nclass left {\n  public static void main(String args[]) {\n    byte x = 64; int i; byte y;\n    i = x << 2;\n    y = (byte) (x << 2);\n    System.out.print(i + \" \" + y);\n  }\n}",
+      "options": ["0 256", "0 64", "256 0", "64 0"],
+      "answer": "256 0",
+      "explanation": "`x << 2` shifts the bits of 64 (`01000000`) left by two positions. The `byte` is promoted to `int`, resulting in `100000000` which is 256. So `i` is 256. When this `int` 256 is cast to a `byte`, it is truncated to 8 bits, resulting in `00000000`, which is 0. So `y` is 0."
+    },
+    {
+      "id": 18,
+      "question": "What will be the output of the following Java code? \nclass Output {\n  public static void main(String args[]) {\n    Integer i = new Integer(257);\n    byte x = i.byteValue();\n    System.out.print(x);\n  }\n}",
+      "options": ["257", "256", "1", "0"],
+      "answer": "1",
+      "explanation": "The `byteValue()` method converts the `Integer` to a `byte` by discarding all but the 8 lowest-order bits. The integer 257 in binary is `100000001`. The 8 low-order bits are `00000001`, which has a decimal value of 1."
+    },
+    {
+      "id": 19,
+      "question": "Which of these keywords is used to define interfaces in Java?",
+      "options": ["intf", "Intf", "interface", "Interface"],
+      "answer": "interface",
+      "explanation": "The `interface` keyword is used to declare an interface in Java. Java keywords are case-sensitive and must be written in lowercase."
+    },
+    {
+      "id": 20,
+      "question": "Which of these packages contains the exception StackOverflowError in Java?",
+      "options": ["java.io", "java.system", "java.lang", "java.util"],
+      "answer": "java.lang",
+      "explanation": "`StackOverflowError` is a fundamental error class. All fundamental classes and errors (like `Object`, `String`, `Error`) are located in the `java.lang` package, which is imported by default in every Java program."
+    },
+    {
+      "id": 21,
+      "question": "Which of the below is not a Java Profiler?",
+      "options": ["JProfiler", "Eclipse Profiler", "JVM", "JConsole"],
+      "answer": "JVM",
+      "explanation": "A profiler is a tool for analyzing application performance. JProfiler, Eclipse Profiler, and JConsole are all tools. The JVM (Java Virtual Machine) is the runtime environment that executes the code; it is the entity being profiled, not the profiling tool itself."
+    },
+    {
+      "id": 22,
+      "question": "Which of the following is a superclass of every class in Java?",
+      "options": ["ArrayList", "Abstract class", "Object class", "String"],
+      "answer": "Object class",
+      "explanation": "This is a variant of an earlier question. The `java.lang.Object` class is the ultimate superclass of all classes in Java, whether defined by the user or part of the Java API like `ArrayList` and `String`."
+    },
+    {
+      "id": 23,
+      "question": "What is the numerical range of a char data type in Java?",
+      "options": ["0 to 256", "-128 to 127", "0 to 65535", "0 to 32767"],
+      "answer": "0 to 65535",
+      "explanation": "A `char` in Java is a 16-bit unsigned Unicode character. Because it is unsigned and has 16 bits, its range is from 0 to (2^16 - 1), which is 0 to 65535."
+    },
+    {
+      "id": 24,
+      "question": "Which one of the following is not an access modifier?",
+      "options": ["Protected", "Void", "Public", "Private"],
+      "answer": "Void",
+      "explanation": "Java's access modifiers are `public`, `protected`, `private`, and default (package-private). The `void` keyword is not an access modifier; it is a return type that indicates a method does not return a value."
+    },
+    {
+      "id": 25,
+      "question": "Which of these keywords are used for the block to be examined for exceptions?",
+      "options": ["check", "throw", "catch", "try"],
+      "answer": "try",
+      "explanation": "In Java exception handling, the `try` block is used to enclose the code that may throw an exception. If an exception is thrown, it can be handled by a corresponding `catch` block."
+    }
+  ]
+}
