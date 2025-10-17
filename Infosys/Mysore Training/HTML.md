@@ -104,6 +104,7 @@
 | 3XX | Redirection | Indicates that the client must take additional action to complete the request. |
 | 4XX | Client errors | Intended for situations where the client has caused the error. The server specifies whether the error caused is temporary or permanent. |
 | 5XX | Server Errors | Intended for situations when the server has failed to fulfill a request. |
+
 **Examples:**
 | Status Code | Description |
 |---|---|
@@ -120,6 +121,7 @@
 - Clients use this content type or media type header to select an appropriate viewer application for the type of data the header indicates.
 - Web applications use MIME types to determine a file or resource's format before transmission.
 - MIME types can reveal a file's encoding or compression format.
+
 **Attributes:**
 | Category | Description | Examples |
 |---|---|---|
@@ -254,6 +256,7 @@ html in which the page is written in. -->
 - Meta elements are used to include key-value pairs describing properties (author, keywords, character encoding, etc.).
 - It is machine readable and does not render anything on the web page.
 - Typically positioned in the `<head>` section.
+
 **Attributes:**
 | Attribute | Value | Description |
 |---|---|---|
