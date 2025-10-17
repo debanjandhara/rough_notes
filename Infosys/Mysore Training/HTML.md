@@ -5,7 +5,9 @@
 ### Uniform Resource Locator (URL)
 **Definition:** The Uniform Resource Locator (URL) uniquely identifies a particular resource on the Internet.
 **Syntax:** `Protocol://Host:Port/Path`
+
 **Attributes:**
+
 | Component | Description |
 |---|---|
 | Protocol | The protocol is used to communicate with the server |
@@ -20,26 +22,36 @@
 
 ### Protocols
 **Definition:** For any client to communicate with any server, both the client and server must agree upon some predefined rules of communication. Such rules are called protocols.
+
+
 **Notes:**
+
 - Just by knowing the IP of the web server, the web browser cannot communicate with the web server. There needs to be a set of rules to facilitate the communication taking place. These rule sets are established as protocols.
+
 *CrossReferences:* One such protocol is Hypertext Transfer Protocol (HTTP), which is used for web communication.
 
 ### Hypertext Transfer Protocol (HTTP)
 **Definition:** In simple terms, Hypertext Transfer Protocol is set of rules for transferring files (text, graphic images, sound, video and other multimedia files) on WWW.
+
 **Notes:**
+
 - The web browser and the web server communicate with each other with an application-level protocol called HTTP.
 - This allows a variety of clients to communicate with any vendor's server without compatibility problems.
 - HTTP is a request/response based, stateless, and connectionless protocol.
 
 #### HTTP as Request/Response based
+
 **Notes:**
+
 - The client establishes a connection with the server and sends the request.
 - Over the same connection, the server sends the response.
 - Once the response is delivered, the connection is terminated.
 
 #### HTTP as Stateless
 **Definition:** HTTP is called a stateless protocol because each request is executed independently, without any knowledge of previous requests.
+
 **Notes:**
+
 - Once a transaction ends the connection between the browser and the server is also lost.
 - This potentially prevents denial of service attacks by keeping connections open indefinitely.
 - To resolve the issue of losing previous request state in a multi-server environment, the server sends additional data (stored on the client/browser storage) that identifies a particular client and its state. The server uses this state data to service the request.
@@ -49,13 +61,17 @@
 
 #### HTTP hits
 **Definition:** Each time a web server is requested for a file, it is called a hit. HTTP hits refers to the number of times a web server receives an HTTP request.
+
 **Notes:**
+
 - Every time a visitor loads a web page, a different request is sent for different web files like web pages, images, Cascading Style Sheet files, JavaScript files etc.
 - Too many HTTP hits can slow down the loading of a website because the browser has to wait for the unprocessed files to load, creating a load delay.
 - Developers must optimize the number of web resources used while designing a web page.
 
 #### HTTP vs HTTPS
+
 **Notes:**
+
 - **HTTP:** Text based protocol; messages are easily intercepted if communication security is breached (less secure).
 - **HTTPS:** Hyper Text Transfer Protocol over secured socket layer (SSL). Communication between browser and server is encrypted using an encryption algorithm.
 - A URL using HTTPS typically starts with `https://...`
@@ -65,7 +81,9 @@
 
 ### HTTP request
 **Definition:** Message sent from browser to server.
+
 **Notes:**
+
 - Different HTTP request types (methods) include GET, POST.
 - Message contains header and body (optional).
 
@@ -78,7 +96,9 @@
 | Request body | Optional message body contains data to be sent to the server. But this is present only in case of a POST request. |
 
 #### GET method
+
 **Notes:**
+
 - The most commonly used method. Used by default to get static content.
 - Parameters are passed as name-value pairs in the URL and are encoded if they contain special characters.
 - Used when a small amount of data needs to be sent to the server as part of the request.
@@ -86,7 +106,9 @@
 - **URL Encoding:** Performed to convert data passed via HTML forms. Replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits. The first question mark (`?`) is used as a separator.
 
 #### POST method
+
 **Notes:**
+
 - Used to send parameters that need to be processed to the server.
 - Parameters from the browser are passed as part of the message body.
 - Used when a large number of field values have to be passed.
@@ -96,7 +118,11 @@
 **Notes:** To inform the browser regarding the status of the request made to the server, the HTTP response contains a field called status code, that is issued by a server.
 
 ### Different HTTP Responses
+
+
 **Attributes:**
+
+
 | Status Code | Title | Description |
 |---|---|---|
 | 1XX | Informational Responses | Indicates that the request was received and understood and also alerts the client to wait for a final response. |
@@ -115,14 +141,18 @@
 
 ### Multipurpose Internet Mail Extensions (MIME)
 **Definition:** MIME is a standardized way to indicate the nature and format of a response. It is a standard that enhances email message formats to support attachments of audio, video, image, and application files in addition to text in character sets other than ASCII.
+
 **Notes:**
+
 - To inform the client about the incoming data format from the server, the HTTP response contains a `content-type` field.
 - Servers insert a MIME type as a value in the `content-type` attribute of the response header before sending a response to the client.
 - Clients use this content type or media type header to select an appropriate viewer application for the type of data the header indicates.
 - Web applications use MIME types to determine a file or resource's format before transmission.
 - MIME types can reveal a file's encoding or compression format.
 
+
 **Attributes:**
+
 | Category | Description | Examples |
 |---|---|---|
 | text | Represents any document that contains text and is theoretically human readable | text/plain, text/html, text/css, text/javascript |
@@ -134,7 +164,9 @@
 ### JS Stack
 
 #### Introduction to MEAN/MERN stack
+
 **Notes:**
+
 - A technology stack (tech stack) is a combination of programming languages, tools, and frameworks used for building web applications.
 - The tech stack is generally visualized in two parts: Front-end (Client side) and Back-end (Server side).
 - **Front-end:** Technologies used for interaction with the user.
@@ -145,14 +177,18 @@
 - JS stacks have gained attention because they involve open source technologies and a single programming language (JavaScript) used for the entire application.
 
 #### Reasons to adopt JS (MEAN/MERN) stack
+
 **Notes:**
+
 - **Open source technologies:** Free and open-source components, benefiting from community contributions.
 - **Common language:** Uses JavaScript for both client-side and server-side programming.
 - **Cost effective:** Companies save costs by working with a single stack, eliminating the need to hire different specialists (creating the full-stack JavaScript developer profile).
 - **Usage of JSON:** Data exchange uses JavaScript Object Notation (JSON) format, eliminating the need for conversion libraries and allowing easier work with external APIs.
 
 #### MEAN/MERN Components
+
 **Attributes:**
+
 | Component | Stack Role | Details |
 |---|---|---|
 | **MongoDB** | Database system (M) | Open source document oriented database written in C++. Data stored in documents (name-value pairs) within a collection. |
@@ -162,7 +198,9 @@
 | **Node.js** | Back-end runtime environment (N) | Server side cross-platform open source JavaScript execution environment. Built on Google Chrome's V8 JavaScript runtime. |
 
 ### Structure of a web application (Client/Server Side Mapping)
+
 **Notes:**
+
 - **Client-side (Front-end):** Application running on user devices (PC, mobile, etc.). Communicates with the server to fetch information. Uses frameworks like Angular/React, HTML, CSS, JavaScript, and Bootstrap in the Browser.
 - **Server-side (Back-end):** Hosts business logic and validation for processing client requests. Uses Node.js, Express, and Database (Mongo DB or MySQL).
 - **Data Flow:**
@@ -177,7 +215,9 @@
 
 ### What is HTML?
 **Definition:** HTML (Hyper Text Markup Language) is a markup language that defines the structure of web pages and determines how content is displayed online.
+
 **Notes:**
+
 - HTML is case-insensitive, meaning tags can be written in lowercase (`<html>`) or uppercase (`<HTML>`) and produce the same output.
 - Current major version is HTML5 (HTML5.2 is the latest standard).
 - HTML capabilities include: Publishing documents, creating forms, embedding media (videos, audio, flash movies), accessing online information via hyperlinks, and running on different operating systems.
@@ -194,7 +234,9 @@
 ```
 
 #### Different categories of elements
+
 **Attributes:**
+
 | Category | Definition | Syntax | Example |
 |---|---|---|---|
 | **Container Element** | Contains start and end tag. | `<tagname> text here </tagname>` | `<title> Welcome to Infosys!</title>` |
@@ -231,7 +273,9 @@ html in which the page is written in. -->
 12. </body>
 13. </html>
 ```
+
 **Notes:**
+
 - The HTML structure is divided into three sections: HTML, head and body.
 - **`<!DOCTYPE HTML>`:** Instructs the web browser about the version of HTML.
 - **`<html>`:** The container for various HTML elements.
@@ -241,7 +285,9 @@ html in which the page is written in. -->
 ### Head element (<head>)
 **Definition:** The `<head>` element is a container for all the head elements like a title for the document, scripts, styles, meta information, and more. It is placed between the `<html>` tag and the `<body>` tag.
 **Notes:** HTML metadata is data about the HTML document. Metadata is not displayed but will be read by the machine (e.g., character encoding, author, description, refresh).
+
 **Attributes:**
+
 | Tag | Description |
 |---|---|
 | `<title>` | Used to provide the title of the document displayed in browser toolbar/tab and when bookmarked. |
@@ -252,12 +298,16 @@ html in which the page is written in. -->
 
 ### Meta element (<meta>)
 **Definition:** In HTML5, metadata about an HTML document is provided using the "meta" element tag. Metadata is information about the data on the page that is not visible to the user.
+
 **Notes:**
+
 - Meta elements are used to include key-value pairs describing properties (author, keywords, character encoding, etc.).
 - It is machine readable and does not render anything on the web page.
 - Typically positioned in the `<head>` section.
 
+
 **Attributes:**
+
 | Attribute | Value | Description |
 |---|---|---|
 | name | application-name, author, description, generator, keywords | Specifies a name for the metadata |
@@ -288,7 +338,9 @@ html in which the page is written in. -->
 10. <h1></h1>
 11. </body>
 ```
+
 **Notes:**
+
 - The example snippet shows tags used for user input (`<form>`, `<input>`), structure (`<table>`, `<br>`, `<div>`, `<span>`, `<h1>`), and multimedia (`<img>`, `<audio>`, `<video>`).
 
 ### Section 4: Input and Form Elements
@@ -296,7 +348,9 @@ html in which the page is written in. -->
 ### Form element (<form>)
 **Definition:** Forms are used for collecting user information which may be for registration, payment, etc. Forms are used to pass user data to a specified URL.
 **Notes:** To create a form, the `<form>` tag is used.
+
 **Attributes:**
+
 | Attribute | Description |
 |---|---|
 | Name | Used for accessing the form data by the scripting language. |
@@ -307,12 +361,16 @@ html in which the page is written in. -->
 ### Input element in Form (<input>)
 **Definition:** The `<input>` tag specifies an input field used inside a form, where the user can enter data.
 **Syntax:** `<input type="input-type" value="element-value"/>`
+
 **Notes:**
+
 - The `type` attribute specifies the type of value accepted.
 - The `value` attribute specifies the element's value sent to the server program.
 
 #### Input types present before HTML5
+
 **Attributes:**
+
 | Value | Description |
 |---|---|
 | text | Creates a string input field. |
@@ -325,7 +383,9 @@ html in which the page is written in. -->
 
 #### New input types added in HTML5
 **Notes:** HTML5 introduced new input types to reduce development time and improve user experience.
+
 **Attributes:**
+
 | Type | Description |
 |---|---|
 | date | Input represents date (year, month, date) value without time zone |
@@ -340,7 +400,9 @@ html in which the page is written in. -->
 **Notes:** Input types also affect the keyboard layouts on a mobile phone (e.g., number input type provides a numeric keypad).
 
 #### Attributes of the input element (Detailed)
+
 **Attributes:**
+
 | Attribute | Description | Usage/Observation |
 |---|---|---|
 | required | Value required for form submission. | Used for username/password fields. |
@@ -361,7 +423,9 @@ html in which the page is written in. -->
 
 ### Label element (<label>)
 **Definition:** The `<label>` tag defines a label for an input element.
+
 **Notes:**
+
 - Improves usability; clicking on the label text toggles the input control.
 - Bound to an input element using the `for` attribute, which must match the `id` attribute of the input element.
 - The `id` attribute is used to uniquely identify an element (best practice for form elements).
@@ -371,7 +435,9 @@ html in which the page is written in. -->
 
 ### Select element (<select>)
 **Definition:** Used to create a dropdown list.
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | autofocus | Focuses on a particular input element of a form automatically. |
@@ -382,16 +448,22 @@ html in which the page is written in. -->
 
 ### Datalist element (<datalist>)
 **Definition:** Used to provide predefined values for the input field.
+
 **Notes:**
+
 - Datalist dropdown is used for autocomplete; the selected value can be edited.
 - Requires the input field to have a `list` attribute pointing to the `id` of the datalist element.
 - Functionally different from `<select>`.
 
 ### Textarea element (<textarea>)
 **Definition:** Used for providing multiple line input.
+
 **Notes:**
+
 - Ensure no unwanted spaces or characters are added between the textarea tags, as they will be visible.
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | maxlength | Identifies the maximum length of input value. |
@@ -402,14 +474,18 @@ html in which the page is written in. -->
 
 ### Button element (<button>)
 **Definition:** Used to create a clickable button which is either used for submitting a form or resetting the form fields.
+
 **Notes:**
+
 - Button types: `reset` (resets form data), `submit` (submits form data), and `button` (clickable button).
 
 ### Organizing fields in a form
 
 #### div tag (<div>)
 **Definition:** Defines a division or a section in an HTML document. Used to group HTML elements and apply CSS styles.
+
 **Notes:**
+
 - Block-level element; browser inserts a line break before and after the tag.
 - Used to group field names and input fields in forms.
 
@@ -425,7 +501,9 @@ html in which the page is written in. -->
 
 ### Audio Element (<audio>)
 **Definition:** Used to embed audio in a web page.
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | src | Specifies the URL of the media resource |
@@ -437,7 +515,9 @@ html in which the page is written in. -->
 
 ### Video Element (<video>)
 **Definition:** Specifies video, such as a movie clip or other video streams. Specifies a standard way to embed a video in a web page.
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | src | Specifies the URL of the media resource |
@@ -452,7 +532,9 @@ html in which the page is written in. -->
 
 ### Source Element (<source>)
 **Definition:** Allows specification of alternative multiple media resources for media elements, which the browser may choose from based on media type, codec support, or media query.
+
 **Notes:**
+
 - Different media sources must be listed in order (most desirable to least desirable).
 - `<source>` element is only considered when the `src` attribute of the media element is absent.
 - Used because not all browsers support all image/audio/video formats.
@@ -465,7 +547,9 @@ html in which the page is written in. -->
 ### Anchor Element (<a>)
 **Definition:** Any text or image that provides a link to another webpage is called as "hyperlink". To link webpages, anchor element is used.
 **Syntax:** `<a href="url" target="value">Text</a>`
+
 **Attributes:**
+
 | Attribute | Description |
 |---|---|
 | href | Used to specify the URL of the webpage that needs to be linked. |
@@ -475,7 +559,9 @@ html in which the page is written in. -->
 | target="_parent" | Linked resources will open in the parent of the current window (If no parent, it behaves like _self) |
 | target="_top" | Linked resources will open in the top most level window of the current window (If no parent, it behaves like _self) |
 | rel="noreferrer noopener" | Used with `target="_blank"` for security to prevent the opened page from changing the location of the original page (mitigating phishing attacks). |
+
 **Notes:**
+
 - Appearance of links: Unvisited (underlined and blue), Visited (underlined and purple), Active (underlined and red).
 **CommonMistakes:**
 - ⚠️ Do not use generic terms such as "Click here" or "link" as hyperlink text. Use relevant text indicative of the destination.
@@ -485,14 +571,18 @@ html in which the page is written in. -->
 
 ### Heading elements (<h1> to <h6>)
 **Definition:** HTML provides the elements like `<h1>`... `<h6>` in order to format headings.
+
 **Notes:**
+
 - `<h1>` (32px) defines the most important heading.
 - `<h6>` (10px) defines the least important heading.
 - Users skim the contents in web pages by its headings.
 
 ### Text formatting elements
 **Definition:** HTML defines formatting elements for formatting the text in the webpages.
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | `<b>` | Describes bold text |
@@ -505,7 +595,9 @@ html in which the page is written in. -->
 | `<strong>` | Describes strong text |
 | `<sub>` | Describes subscripted text |
 | `<sup>` | Describes superscripted text |
+
 **Notes:**
+
 - `abbr` element defines abbreviation using `title` attribute.
 - `small` element defines text in smaller font-size.
 - `mark` element highlights text.
@@ -519,30 +611,40 @@ html in which the page is written in. -->
 **Notes:** Lists can be numbered (ordered list) or unnumbered (unordered). There are 3 types of list in HTML.
 
 #### Unordered List (<ul>)
+
 **Notes:**
+
 - Defined using `ul` element; list-items defined using `li`.
 - Default bullets are "Disc".
 - Bullets can be customized (e.g., `type="circle"` for circle bullets). (Type attribute can also be set to "square".)
 
 #### Ordered List (<ol>)
+
 **Notes:**
+
 - Defined using `ol` element; list-items defined using `li`.
 - Default bullets start from 1.
 - List type can be changed (e.g., `type="A"` for alphabet style; `type="i"` for small Roman numerals).
 
 #### Definition list (<dl>)
+
 **Notes:**
+
 - Defined using `<dl>` tag.
 - Description term defined using `<dt>` tags.
 - Description definition defined using `<dd>` tags.
 
 ### Character entities
 **Definition:** Used to include special characters (reserved characters like < or >) or those absent on the keyboard (like ©) as content.
+
 **Notes:**
+
 - Entity references start with `&` and end with `;`.
 - Can be specified by entity name or entity number.
 - `<hr>` can be used to insert a thematic break.
+
 **Attributes:**
+
 | Character | Description | Entity Name | Entity Number |
 |---|---|---|---|
 | (space) | Non-breaking space | &nbsp; | &#160; |
@@ -557,7 +659,9 @@ html in which the page is written in. -->
 
 ### Table element (<table>)
 **Definition:** A table element in HTML helps in representing content in terms of a two-dimensional structure i.e., a combination of rows and columns.
+
 **Notes:**
+
 - **`border`** attribute: provides the border to the table.
 - **`<thead>`** tag: provides the heading to the table.
 - **`<tr>`** tag: creates rows.
@@ -567,14 +671,18 @@ html in which the page is written in. -->
 - **`<caption>`** tag: gives a title to the table.
 
 #### Table Attributes (<th> and <td>)
+
 **Attributes:**
+
 | Attributes | Description |
 |---|---|
 | Colspan | Merges column (e.g., `colspan="2"` to merge two columns). |
 | Rowspan | Merges row (e.g., `rowspan="2"` to merge two rows vertically). |
 
 #### Aligning forms with Table elements
+
 **Notes:**
+
 - Alignment is crucial for better look and feel.
 - Tables (`<tr>`, `<td>`) are used to align form elements by placing the label in one `<td>` and the input field in an adjacent `<td>` within the same `<tr>`.
 - Best practices for alignment suggest right alignment for labels or placing labels on top of input fields if horizontal space is limited.
@@ -583,7 +691,9 @@ html in which the page is written in. -->
 
 ### Semantic elements
 **Definition:** Used to organize varied webpage content and provide better semantics (meaning) to content.
+
 **Attributes:**
+
 | Sectioning element | Description |
 |---|---|
 | main | Defines the main content of a document. |
@@ -599,7 +709,9 @@ html in which the page is written in. -->
 ### Section 10: Best Practices Summary
 
 ### Best practice for writing a HTML document (Summary)
+
 **Notes:**
+
 1. Begin HTML file with `<!DOCTYPE>` declaration.
 2. Write HTML elements in lowercase (convention for readability).
 3. Follow proper document structure (use `<html>`, `<head>`, `<body>`).
@@ -615,7 +727,9 @@ html in which the page is written in. -->
 13. Use `label` element for form elements (for usability and binding via `for`/`id`).
 
 ### Best practice for form layout
+
 **Notes:**
+
 - **Headings:** Give a clear heading specifying the form's purpose.
 - **Sectioning & Addressing:** Use conversational tone; visually separate content into specific topics/sections.
 - **Alignment:** Right-align labels for better look and feel, or place labels atop inputs if space is limited (often achieved using tables).
@@ -623,7 +737,9 @@ html in which the page is written in. -->
 - **Mandatory Fields:** Use `*` (asterisk symbol) to indicate mandatory fields and explicitly mention that "* marked fields are mandatory".
 
 ### Code Maintainability
+
 **Notes:**
+
 - Delete unused code that is not rendered on the webpage, instead of just commenting it out, as commenting bloats programs and reduces readability.
 - Avoid Artifacts with High Cyclomatic Complexity; keep Artifacts small and simple.
 
