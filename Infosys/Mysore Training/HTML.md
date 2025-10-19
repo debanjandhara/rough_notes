@@ -1,5 +1,3 @@
-### Reference Notes: LEX Training Material
-
 ### Section 1: Network Protocols and Location
 
 ### Uniform Resource Locator (URL)
@@ -14,6 +12,7 @@
 | Host | Name of the server to connect to |
 | Port | Every protocol on the Internet operates on a unique TCP/IP port. If port is not explicitly specified in the URL, default port for that protocol is assumed. The standard port for HTTP is 80 |
 | Path | Specifies the path of the resource on the server (usually starts with a '/' which is sometimes known as WEBROOT) |
+
 **Examples:**
 - https://www.youtube.com/results?search_query=html5.2
 - http://google.com
@@ -115,6 +114,7 @@
 
 ### HTTP response
 **Definition:** The server responds to the client request through HTTP response. An HTTP response has a status line, a header and a message body.
+
 **Notes:** To inform the browser regarding the status of the request made to the server, the HTTP response contains a field called status code, that is issued by a server.
 
 ### Different HTTP Responses
@@ -246,6 +246,7 @@
 
 ### Comment
 **Definition:** As a developer, you may want to document your code, so that you can easily refer to it in the future.
+
 **Notes:** Comments are ignored by browser.
 **Syntax:**
 ```
@@ -284,6 +285,7 @@ html in which the page is written in. -->
 
 ### Head element (<head>)
 **Definition:** The `<head>` element is a container for all the head elements like a title for the document, scripts, styles, meta information, and more. It is placed between the `<html>` tag and the `<body>` tag.
+
 **Notes:** HTML metadata is data about the HTML document. Metadata is not displayed but will be read by the machine (e.g., character encoding, author, description, refresh).
 
 **Attributes:**
@@ -347,6 +349,7 @@ html in which the page is written in. -->
 
 ### Form element (<form>)
 **Definition:** Forms are used for collecting user information which may be for registration, payment, etc. Forms are used to pass user data to a specified URL.
+
 **Notes:** To create a form, the `<form>` tag is used.
 
 **Attributes:**
@@ -433,7 +436,8 @@ html in which the page is written in. -->
 **Examples:**
 - `<label for="Username">Enter Username</label>` bound to `<input type="text" id="Username" />`
 
-### Select element (<select>)
+### Select element (`<select>`)
+
 **Definition:** Used to create a dropdown list.
 
 **Attributes:**
@@ -481,7 +485,7 @@ html in which the page is written in. -->
 
 ### Organizing fields in a form
 
-#### div tag (<div>)
+#### div tag (`<div>`)
 **Definition:** Defines a division or a section in an HTML document. Used to group HTML elements and apply CSS styles.
 
 **Notes:**
@@ -489,17 +493,19 @@ html in which the page is written in. -->
 - Block-level element; browser inserts a line break before and after the tag.
 - Used to group field names and input fields in forms.
 
-#### span tag (<span>)
+#### span tag (`<span>`)
 **Definition:** Used to group inline-elements in a document.
+
 **Notes:** Inline element, unlike block-level `<div>`.
 
 ### Section 5: Multimedia Elements
 
 ### Embedded elements
 **Definition:** Components like image, audio, video, or incorporated webpages added to a page are managed using embedded elements.
+
 **Notes:** Every embedded element generates a new request to fetch the embedded component from the server.
 
-### Audio Element (<audio>)
+### Audio Element (`<audio>`)
 **Definition:** Used to embed audio in a web page.
 
 **Attributes:**
@@ -511,9 +517,10 @@ html in which the page is written in. -->
 | loop | Causes the media to play in a loop |
 | autoplay | Media will play automatically on page load |
 | muted | Media will play in muted state |
+
 **Notes:** Content between `<audio>` and `</audio>` tags is shown by browsers that do not support the audio element.
 
-### Video Element (<video>)
+### Video Element (`<video>`)
 **Definition:** Specifies video, such as a movie clip or other video streams. Specifies a standard way to embed a video in a web page.
 
 **Attributes:**
@@ -528,9 +535,10 @@ html in which the page is written in. -->
 | width | Specifies the width of the image in pixels |
 | height | Specifies the height of the image in pixels |
 | Poster | Representative frame for the video till the video is played |
+
 **Notes:** Some video attributes are similar to audio element attributes.
 
-### Source Element (<source>)
+### Source Element (`<source>`)
 **Definition:** Allows specification of alternative multiple media resources for media elements, which the browser may choose from based on media type, codec support, or media query.
 
 **Notes:**
@@ -544,7 +552,7 @@ html in which the page is written in. -->
 
 ### Section 6: Anchor and Linking
 
-### Anchor Element (<a>)
+### Anchor Element (`<a>`)
 **Definition:** Any text or image that provides a link to another webpage is called as "hyperlink". To link webpages, anchor element is used.
 **Syntax:** `<a href="url" target="value">Text</a>`
 
@@ -608,6 +616,7 @@ html in which the page is written in. -->
 
 ### List Elements
 **Definition:** The data in the web pages are better perceived when it is organized into lists.
+
 **Notes:** Lists can be numbered (ordered list) or unnumbered (unordered). There are 3 types of list in HTML.
 
 #### Unordered List (<ul>)
