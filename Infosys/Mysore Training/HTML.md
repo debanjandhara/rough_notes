@@ -283,7 +283,7 @@ html in which the page is written in. -->
 - **`<head>`:** Consists of various head elements and metadata content.
 - **`<body>`:** Includes various contents of an HTML document.
 
-### Head element (<head>)
+### Head element (`<head>`)
 **Definition:** The `<head>` element is a container for all the head elements like a title for the document, scripts, styles, meta information, and more. It is placed between the `<html>` tag and the `<body>` tag.
 
 **Notes:** HTML metadata is data about the HTML document. Metadata is not displayed but will be read by the machine (e.g., character encoding, author, description, refresh).
@@ -298,7 +298,7 @@ html in which the page is written in. -->
 | `<style>` | Used to specify the style information for a HTML document. |
 | `<script>` | Used to embed a script within a HTML document. |
 
-### Meta element (<meta>)
+### Meta element (`<meta>`)
 **Definition:** In HTML5, metadata about an HTML document is provided using the "meta" element tag. Metadata is information about the data on the page that is not visible to the user.
 
 **Notes:**
@@ -324,7 +324,7 @@ html in which the page is written in. -->
 | Character Encoding | `<meta charset="UTF-8">` | |
 | Viewport Setting | `<meta name="viewport" content="width=device-width, initial-scale=1.0">` | Controls dimensions and scaling. `width=device-width` sets page width to device screen width. `initial-scale=1.0` sets initial zoom level. |
 
-### Body element (<body>)
+### Body element (`<body>`)
 **Definition:** The `<body>` tag defines the document's body and is used to add content to the web page. There can be only one `<body>` element in an HTML document.
 **Syntax:**
 ```html
@@ -347,7 +347,7 @@ html in which the page is written in. -->
 
 ### Section 4: Input and Form Elements
 
-### Form element (<form>)
+### Form element (`<form>`)
 **Definition:** Forms are used for collecting user information which may be for registration, payment, etc. Forms are used to pass user data to a specified URL.
 
 **Notes:** To create a form, the `<form>` tag is used.
@@ -361,7 +361,7 @@ html in which the page is written in. -->
 | Method | Specifies the HTTP request method (GET/POST) used to submit data. |
 | Target | Specifies where to display the response once the form is submitted. |
 
-### Input element in Form (<input>)
+### Input element in Form (`<input>`)
 **Definition:** The `<input>` tag specifies an input field used inside a form, where the user can enter data.
 **Syntax:** `<input type="input-type" value="element-value"/>`
 
@@ -424,7 +424,7 @@ html in which the page is written in. -->
 | disabled | Prevents from modifying the value, value is not sent on submit. | Last name field disabled in example. |
 | multiple | allows to enter/select more than one value. | (content not found in source) |
 
-### Label element (<label>)
+### Label element (`<label>`)
 **Definition:** The `<label>` tag defines a label for an input element.
 
 **Notes:**
@@ -450,7 +450,7 @@ html in which the page is written in. -->
 | multiple | Select multiple options from the dropdown list. |
 | size | Value of size decides the number of visible options in dropdown. |
 
-### Datalist element (<datalist>)
+### Datalist element (`<datalist>`)
 **Definition:** Used to provide predefined values for the input field.
 
 **Notes:**
@@ -459,7 +459,7 @@ html in which the page is written in. -->
 - Requires the input field to have a `list` attribute pointing to the `id` of the datalist element.
 - Functionally different from `<select>`.
 
-### Textarea element (<textarea>)
+### Textarea element (`<textarea>`)
 **Definition:** Used for providing multiple line input.
 
 **Notes:**
@@ -476,7 +476,7 @@ html in which the page is written in. -->
 | cols | Visible width of textarea. |
 | autofocus, name, disabled | (Also supported, general input attributes). |
 
-### Button element (<button>)
+### Button element (`<button>`)
 **Definition:** Used to create a clickable button which is either used for submitting a form or resetting the form fields.
 
 **Notes:**
@@ -577,7 +577,7 @@ html in which the page is written in. -->
 
 ### Section 7: Text Formatting and Lists
 
-### Heading elements (<h1> to <h6>)
+### Heading elements (`<h1>` to `<h6>`)
 **Definition:** HTML provides the elements like `<h1>`... `<h6>` in order to format headings.
 
 **Notes:**
@@ -619,7 +619,7 @@ html in which the page is written in. -->
 
 **Notes:** Lists can be numbered (ordered list) or unnumbered (unordered). There are 3 types of list in HTML.
 
-#### Unordered List (<ul>)
+#### Unordered List (`<ul>`)
 
 **Notes:**
 
@@ -627,7 +627,7 @@ html in which the page is written in. -->
 - Default bullets are "Disc".
 - Bullets can be customized (e.g., `type="circle"` for circle bullets). (Type attribute can also be set to "square".)
 
-#### Ordered List (<ol>)
+#### Ordered List (`<ol>`)
 
 **Notes:**
 
@@ -635,7 +635,7 @@ html in which the page is written in. -->
 - Default bullets start from 1.
 - List type can be changed (e.g., `type="A"` for alphabet style; `type="i"` for small Roman numerals).
 
-#### Definition list (<dl>)
+#### Definition list (`<dl>`)
 
 **Notes:**
 
@@ -666,7 +666,7 @@ html in which the page is written in. -->
 
 ### Section 8: Table Elements and Layout
 
-### Table element (<table>)
+### Table element (`<table>`)
 **Definition:** A table element in HTML helps in representing content in terms of a two-dimensional structure i.e., a combination of rows and columns.
 
 **Notes:**
@@ -679,7 +679,7 @@ html in which the page is written in. -->
 - **`<td>`** tag: provides content or data (data cells).
 - **`<caption>`** tag: gives a title to the table.
 
-#### Table Attributes (<th> and <td>)
+#### Table Attributes (`<th>` and `<td>`)
 
 **Attributes:**
 
