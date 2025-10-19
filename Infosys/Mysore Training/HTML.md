@@ -316,6 +316,7 @@ html in which the page is written in. -->
 | http-equiv | content-type, default-style, refresh | Provides HTTP header for information/value of content attribute |
 | content | text | Gives the value associated with http-equiv or name attribute |
 | charset | character_set | Specifies character encoding for an HTML document |
+
 **Examples:**
 | Scenario | Code | Notes |
 |---|---|---|
@@ -433,6 +434,7 @@ html in which the page is written in. -->
 - Bound to an input element using the `for` attribute, which must match the `id` attribute of the input element.
 - The `id` attribute is used to uniquely identify an element (best practice for form elements).
 - Input elements are also called UI (User Interface) components.
+
 **Examples:**
 - `<label for="Username">Enter Username</label>` bound to `<input type="text" id="Username" />`
 
