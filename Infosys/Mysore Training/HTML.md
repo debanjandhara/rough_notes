@@ -1,4 +1,56 @@
-### Section 1: Network Protocols and Location
+### Section 1: JavaScript Stacks
+
+### JS Stack
+
+#### Introduction to MEAN/MERN stack
+
+**Notes:**
+
+- A technology stack (tech stack) is a combination of programming languages, tools, and frameworks used for building web applications.
+- The tech stack is generally visualized in two parts: Front-end (Client side) and Back-end (Server side).
+- **Front-end:** Technologies used for interaction with the user.
+- **Back-end:** Technologies used on the server for processing user inputs and interacting with the database.
+- It is essential to identify the right tech stack to speed up development.
+- **MEAN stack:** MongoDB - Express.js - Angular - Node.js.
+- **MERN stack:** MongoDB - Express.js - React - Node.js.
+- JS stacks have gained attention because they involve open source technologies and a single programming language (JavaScript) used for the entire application.
+
+#### Reasons to adopt JS (MEAN/MERN) stack
+
+**Notes:**
+
+- **Open source technologies:** Free and open-source components, benefiting from community contributions.
+- **Common language:** Uses JavaScript for both client-side and server-side programming.
+- **Cost effective:** Companies save costs by working with a single stack, eliminating the need to hire different specialists (creating the full-stack JavaScript developer profile).
+- **Usage of JSON:** Data exchange uses JavaScript Object Notation (JSON) format, eliminating the need for conversion libraries and allowing easier work with external APIs.
+
+#### MEAN/MERN Components
+
+**Attributes:**
+
+| Component | Stack Role | Details |
+|---|---|---|
+| **MongoDB** | Database system (M) | Open source document oriented database written in C++. Data stored in documents (name-value pairs) within a collection. |
+| **Express.js** | Back-end web framework (E) | Lightweight Node.js based application development framework. Used for back-end development. |
+| **Angular** | Front-end framework (A/MEAN) | Open source JavaScript framework (Google). Used for building both mobile and desktop web applications. Complete solution for rapid front-end development. |
+| **React** | Front-end framework (R/MERN) | Open source JavaScript framework (Facebook). Used for building both mobile and desktop web applications. Complete solution for rapid front-end development. |
+| **Node.js** | Back-end runtime environment (N) | Server side cross-platform open source JavaScript execution environment. Built on Google Chrome's V8 JavaScript runtime. |
+
+### Structure of a web application (Client/Server Side Mapping)
+
+**Notes:**
+
+- **Client-side (Front-end):** Application running on user devices (PC, mobile, etc.). Communicates with the server to fetch information. Uses frameworks like Angular/React, HTML, CSS, JavaScript, and Bootstrap in the Browser.
+- **Server-side (Back-end):** Hosts business logic and validation for processing client requests. Uses Node.js, Express, and Database (Mongo DB or MySQL).
+- **Data Flow:**
+    1. Client (Angular/React) initiates a **Make request**.
+    2. Request goes to Node.js which **Parse request**.
+    3. Request goes to Express which initiates **Get data** from the Database (Mongo DB/MySQL).
+    4. Database returns **Return data** to Express.
+    5. Express/Node.js prepares the response and sends a **Return request** to the client.
+    6. Client (Angular/React) performs **Display response** in the browser.
+
+### Section 2: Network Protocols and Location
 
 ### Uniform Resource Locator (URL)
 **Definition:** The Uniform Resource Locator (URL) uniquely identifies a particular resource on the Internet.
@@ -158,58 +210,6 @@
 | text | Represents any document that contains text and is theoretically human readable | text/plain, text/html, text/css, text/javascript |
 | image | Represents any kind of image including animated images but not video | image/png, image/jpeg, image/gif |
 | application | Represents any kind of binary data | application/json, application/sql, application/javascript, application/pdf |
-
-### Section 2: JavaScript Stacks
-
-### JS Stack
-
-#### Introduction to MEAN/MERN stack
-
-**Notes:**
-
-- A technology stack (tech stack) is a combination of programming languages, tools, and frameworks used for building web applications.
-- The tech stack is generally visualized in two parts: Front-end (Client side) and Back-end (Server side).
-- **Front-end:** Technologies used for interaction with the user.
-- **Back-end:** Technologies used on the server for processing user inputs and interacting with the database.
-- It is essential to identify the right tech stack to speed up development.
-- **MEAN stack:** MongoDB - Express.js - Angular - Node.js.
-- **MERN stack:** MongoDB - Express.js - React - Node.js.
-- JS stacks have gained attention because they involve open source technologies and a single programming language (JavaScript) used for the entire application.
-
-#### Reasons to adopt JS (MEAN/MERN) stack
-
-**Notes:**
-
-- **Open source technologies:** Free and open-source components, benefiting from community contributions.
-- **Common language:** Uses JavaScript for both client-side and server-side programming.
-- **Cost effective:** Companies save costs by working with a single stack, eliminating the need to hire different specialists (creating the full-stack JavaScript developer profile).
-- **Usage of JSON:** Data exchange uses JavaScript Object Notation (JSON) format, eliminating the need for conversion libraries and allowing easier work with external APIs.
-
-#### MEAN/MERN Components
-
-**Attributes:**
-
-| Component | Stack Role | Details |
-|---|---|---|
-| **MongoDB** | Database system (M) | Open source document oriented database written in C++. Data stored in documents (name-value pairs) within a collection. |
-| **Express.js** | Back-end web framework (E) | Lightweight Node.js based application development framework. Used for back-end development. |
-| **Angular** | Front-end framework (A/MEAN) | Open source JavaScript framework (Google). Used for building both mobile and desktop web applications. Complete solution for rapid front-end development. |
-| **React** | Front-end framework (R/MERN) | Open source JavaScript framework (Facebook). Used for building both mobile and desktop web applications. Complete solution for rapid front-end development. |
-| **Node.js** | Back-end runtime environment (N) | Server side cross-platform open source JavaScript execution environment. Built on Google Chrome's V8 JavaScript runtime. |
-
-### Structure of a web application (Client/Server Side Mapping)
-
-**Notes:**
-
-- **Client-side (Front-end):** Application running on user devices (PC, mobile, etc.). Communicates with the server to fetch information. Uses frameworks like Angular/React, HTML, CSS, JavaScript, and Bootstrap in the Browser.
-- **Server-side (Back-end):** Hosts business logic and validation for processing client requests. Uses Node.js, Express, and Database (Mongo DB or MySQL).
-- **Data Flow:**
-    1. Client (Angular/React) initiates a **Make request**.
-    2. Request goes to Node.js which **Parse request**.
-    3. Request goes to Express which initiates **Get data** from the Database (Mongo DB/MySQL).
-    4. Database returns **Return data** to Express.
-    5. Express/Node.js prepares the response and sends a **Return request** to the client.
-    6. Client (Angular/React) performs **Display response** in the browser.
 
 ### Section 3: HTML5 Fundamentals
 
