@@ -507,6 +507,36 @@ html in which the page is written in. -->
 
 **Notes:** Every embedded element generates a new request to fetch the embedded component from the server.
 
+### Image element (`<img>`)
+**Definition:** Images can be inserted into HTML page by using `<img/>` tag.
+
+**Syntax:** `1. <img src="link of the image" alt="Alternate Text"/>`
+
+**Attributes:**
+| Attributes | Description |
+|---|---|
+| src | Specifies the path of the image |
+| border | Specifies the border of the image |
+| width | Specifies the width of the image in pixels |
+| height | Specifies the height of the image in pixels |
+| alt | Provides an alternative text describing the image, if image is not available |
+
+**Notes:**
+- The `<img/>` tag is an empty tag as it does not have a closing tag.
+- The `src` attribute specifies the URL from where the image resource is loaded.
+- The `alt` attribute provides an alternate text for an image. This is helpful when the user is unable to view the image because of slow connection, an error in the src attribute, or if the user uses a screen reader.
+- The value of the alt attribute should describe the image. Therefore it is a good coding practice to use alt attribute.
+- Image can be made to act as a link by placing `<img>` inside `<a>` element.
+
+**Examples:**
+- **Alt attribute usage:** `<img src="Sunset.jpg" alt="Sun is setting over a beautiful purple lavender field in Valensole Provence France"/>`
+- **Image as a link:**
+```html
+1. <a href="demo.html">
+2. <img src="image.jpg" alt="Google Homepage">
+3. </a>
+```
+
 ### Audio Element (`<audio>`)
 **Definition:** Used to embed audio in a web page.
 
