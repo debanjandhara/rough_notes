@@ -4,7 +4,9 @@
 
 #### CSS Selectors and Types
 **Definition:** A Selector is a pattern that can select multiple HTML elements using the HTML element attributes like class, id, and type, etc.. Once the elements are selected, we can apply the style to all the selected elements.
+
 **Syntax:** `Selector { property: value }`
+
 **Notes:**
 * We use selectors to specifically select HTML elements according to the requirement and style them.
 
@@ -12,38 +14,50 @@
 
 ##### 1. Type Selector (Element selector)
 **Definition:** Selects all the HTML elements that match the tag/node name. Also known as Element selector.
+
 **Syntax:** `Tag_Name{property: value}`
+
 **Examples:**
 * CSS: `p {color: green}`
+
 **Notes:**
 * The styling applies to all matching elements, even if they are nested inside other tags (e.g., a `<p>` inside a `<div>`).
 
 ##### 2. Id Selector
 **Definition:** Used for the case where we must specifically select a single element and style it.
+
 **Syntax:** `#Id_Value { property: value; }`
+
 **Examples:**
 * HTML: `<p id="backgrdOrange">...</p>`
 * CSS: `#backgrdOrange { background-color: orange; }`
+
 **Notes:**
 * `#` indicates Id selector.
 * Id attribute's value should be unique because we use Id selector to style only a specific element.
 
 ##### 3. Class Selector
 **Definition:** Used for cases where you must apply the styling to multiple elements.
+
 **Syntax:** `.Class_Name { property: value; }`
+
 **Examples:**
 * HTML: `<tr class="setGray">`
 * CSS: `.setGray{ background-color: gray }`
+
 **Notes:**
 * To use class selectors, we must provide an attribute named `class` to all elements intended for styling.
 * `.` represents it is a class selector.
 * `.setGray` selects all elements with `class="setGray"`.
+
 **CommonMistakes:**
 * ⚠️ Using a unique ID selector for multiple elements leads to increased code size, difficulty in maintenance, and decreased readability.
 
 ##### 4. Universal Selector
 **Definition:** Selects all the HTML elements on the webpage. It is generally used when you need to apply the same style for all the elements of the webpage.
+
 **Syntax:** `*{property: value}`
+
 **Examples:**
 * CSS: `*{ font-family: cursive; }`
 
@@ -68,50 +82,64 @@
 
 #### Combinators
 **Definition:** Selectors formed by combining multiple selectors and establishing a relationship between them using symbols: `>`, `+`, `~`, or space (` `). Used for selecting a specific element/node to style them.
+
 **Syntax:** `Selector1 (>, +, ~, (space)) Selector2`
+
 **Notes:**
 * Types of Combinators: 1. Descendant Combinator, 2. Child Combinator, 3. Adjacent Sibling Combinator, 4. General Sibling Combinator.
 
 ##### 1. Descendant Combinator
 **Definition:** Selects the second element which is a descendant (child/grandchild etc.) of the first element. It is represented by a space (` `).
+
 **Syntax:** `Selector1 Selector2 {/* styling properties*/}`
+
 **Examples:**
 * CSS: `#firstDiv .p1{ font-style: italic; background-color: orange; }`
 
 ##### 2. Child Combinator
 **Definition:** Selects the second element which is a direct child of the first element. It is represented by `>`.
+
 **Syntax:** `Selector1 > Selector2 {/* styling properties*/}`
+
 **Examples:**
 * CSS: `ol>li { border-top: 3px solid aqua; }`
+
 **Notes:**
 * The style is applied only on the `<li>` tags which are a direct child of `<ol>` tags, and not for the `<li>` tags inside the `<ul>` tag.
 
 ##### 3. Adjacent Sibling Combinator
 **Definition:** Selects the second element which is adjacent (i.e. right next to) to the first element and both having the same parent. It is represented by `+`.
+
 **Syntax:** `Selector1 + Selector2 {/* styling properties*/}`
+
 **Notes:**
 * Used to style only the paragraph that is next to the heading.
 
 ##### 4. General Sibling Combinator
 **Definition:** Selects all the elements that match the second selector and are siblings to the first element. It is represented by `~`.
+
 **Syntax:** `Selector1 ~ Selector2 {/* styling properties*/}`
+
 **Notes:**
 * Used to style all paragraphs that are siblings to the heading.
 
 #### Precedence of Selectors
 **Mechanism:** When multiple selectors select the same element and have common CSS properties, CSS gives priority to the selector which is more specific. The most specific selector styling is applied.
+
 **Precedence Order:** Id > Class > Type
 
 ### CSS Syntax & Properties
 
 #### CSS Syntax
 **Definition:** The CSS syntax (rule set) consists of two important parts: selectors and a declaration block.
+
 **Syntax (Rule Set):**
 ```css
 selectors {
 css-property: value;
 }
 ```
+
 **Notes:**
 * The code inside the curly braces is known as CSS declaration block. Selectors refer to the HTML element that requires styling.
 
@@ -133,6 +161,7 @@ css-property: value;
 | **overflow** | scroll \| hidden \| auto \| visible \| initial \| inherit | Used to specify what should happen if content overflows an element's box | `div { overflow: auto; }` |
 | **display** | none \| inline \| block \| [inline-block etc.](content not found in source) | Used to specify the display behavior of an element | `p { display: inline; }` |
 | **opacity** | number \| initial \| inherit | Used to set the opacity level for an element | `div { opacity: 0.5; }` |
+
 **Notes:**
 * Comma (`,`) is used to group multiple selectors.
 
@@ -143,25 +172,31 @@ css-property: value;
 
 ##### 1. Inline CSS
 **Definition:** The CSS is directly written in the HTML element, inside the `style` attribute.
+
 **Syntax:** `<element style="property1:value1; property2:value2">Content</element>`
+
 **Notes:**
 * Used only when styling must be applied to only that HTML element and the CSS is not going to be repeated anywhere.
 * Increases page loading time and makes maintenance difficult.
 
 ##### 2. Embedded CSS
 **Definition:** The CSS is added to the HTML in the `style` tag of the head section.
+
 **Notes:**
 * Applies styling only to that HTML page where it is written.
 * If the same styling must be applied to another page, it has to be written again.
 
 ##### 3. External CSS
 **Definition:** The CSS is written in another file (`<<file_name>>.css`) and linked to HTML through a `link` tag.
+
 **Syntax (Linking):** `<link rel="stylesheet" href="Path of the CSS file">`
+
 **Notes:**
 * This method is the best when you must apply the same styling to multiple HTML files.
 
 #### Inheritance
 **Definition:** Inheritance is a mechanism where the styling properties of the parent will be passed down to the children.
+
 **Notes:**
 * Saves repetitive tasks of specifying the same style for parents and children.
 * Not all properties will be inherited by the children (e.g., `background-image` applied to `<body>` is not inherited by child elements).
@@ -170,7 +205,9 @@ css-property: value;
 
 #### CSS Box Model
 **Definition:** An invisible box which wraps around every HTML element. HTML elements are considered as boxes.
+
 **Properties:** margins, borders, padding, actual content.
+
 **Notes:**
 * **Components:**
     1.  **Content:** The innermost box; actual data/text/image displayed.
@@ -180,30 +217,39 @@ css-property: value;
 
 #### Height and Width of an Element
 **Definition:** Used to specify the dimensions of the content area inside the box.
+
 **Notes:**
 * **Observation:** The total width/height of the box includes content size, padding, margin, and border.
+
 * **Calculation:** Total Width = (width + padding L + padding R + margin L + margin R + border L + border R)
 
 #### Margins by browser
 **Problem:** Browsers provide default margins that interfere even when margins are explicitly set to 0.
+
 **Solution:** Use the universal selector (`*`) to explicitly set all margins to 0.
 
 #### Multiple values to margins and padding (Shorthand)
+
 **Notes:**
 * **Four values:** Applied in clockwise order: top, right, bottom, and left.
+
 * **Two values:** 1st value applies to top-bottom pair; 2nd value applies to right-left pair.
+
 * **Three values:** 1st value applies to top; 2nd applies to right-left pair; 3rd applies to bottom.
 
 #### Box-Sizing
 **Definition:** Defines how the height and the width of an element is to be calculated, whether to include the paddings and borders or not.
+
 **Types:**
 * **1. Content-box (default):** Does not include borders and padding in the specified size.
 * **2. Border-box:** Includes border and padding in the specified size.
+
 **Notes:**
 * Setting `box-sizing: border-box;` ensures the total width/height remains fixed to the dimension specified, accommodating borders and padding within that size.
 
 #### Overflow
 **Definition:** Controls what happens to content when it is too big to fit into an area. Specifies whether to clip the contents or to add scroll bars.
+
 **Values:**
 * **1. hidden:** Overflow is clipped; rest of content is hidden.
 * **2. visible (default):** Overflowing content is rendered outside the box.
@@ -215,22 +261,27 @@ css-property: value;
 
 #### CSS Positioning
 **Definition:** The CSS Position property sets how an element is positioned in a webpage.
+
 **Properties:** Top, Bottom, Left, Right. Used to decide the exact location of an element.
+
 **Notes:**
 * Types of Position: 1. Static, 2. Absolute, 3. Relative, 4. Fixed, 5. Sticky.
 
 ##### 1. Static
 **Definition:** Default position for all HTML elements. Not affected by `top, right, bottom, left` properties. Elements move up when the page scrolls.
+
 **Notes:**
 * Explicitly setting position to `static` and providing positional values results in no change.
 
 ##### 2. Relative
 **Definition:** Element's original position remains in the flow of the document. `top, right, bottom, left` and `z-index` properties will work. Element is positioned relative to its original position.
+
 **Notes:**
 * Positional adjustments (e.g., `top: 20px`) calculate spacing from the element's original position. Relative positioning does not affect the position of other elements.
 
 ##### 3. Absolute
 **Definition:** Positions elements against the containing element (parent element).
+
 **Notes:**
 * The element is removed from the flow of the document.
 * It is positioned relative to its closest positioned ancestor (if any, and not static), otherwise, it is placed relative to the browser.
@@ -238,6 +289,7 @@ css-property: value;
 
 ##### 4. Fixed
 **Definition:** The element is removed from the flow of the document. It sticks onto the browser window and will not move even if the page scrolls.
+
 **Notes:**
 * Fixed elements affect the positioning of subsequent elements, as if the fixed element were never there in the first place.
 
@@ -248,31 +300,39 @@ css-property: value;
 
 #### Transformations
 **Definition:** An effect that lets an element change its shape, size, and position using the `transform` CSS property (move, tilt, scale).
+
 **Functions:** 1. Translate, 2. Scale, 3. Rotate.
 
 ##### 1. Translate
 **Definition:** Moves an element in the horizontal, vertical direction and sideways.
+
 **Syntax:** `transform: translate(x, y)`
+
 **Parameters:**
 * `x`: moves right by x value (from current position). Negative values move left.
 * `y`: moves down by y value (from current position). Negative values move up.
+
 **Notes:**
 * `translateX()` and `translateY()` functions move the element in one direction (horizontal or vertical).
 
 ##### 2. Scale
 **Definition:** Resizes an element (shrinks or expands).
+
 **Syntax:**
 * `transform: scale(x)` -> scales height and width by x-value.
 * `transform: scale(x,y)` -> scales element width (x-value) and height (y value).
 
 ##### 3. Rotate
 **Definition:** Rotates an element around a fixed point in the clockwise direction.
+
 **Syntax:** `transform: rotateY(120deg)` or `transform: rotateY(2turn)`
+
 **Notes:**
 * `rotateX()`, `rotateY()` functions rotate the element in x and y direction respectively.
 
 #### Transitions
 **Definition:** Allows changing CSS property values over a given duration in a smooth manner (not immediately).
+
 **Requirements to create a transition effect:** Specify the CSS property to affect and the duration of the effect.
 
 ##### CSS Transitions properties
@@ -286,7 +346,9 @@ css-property: value;
 
 #### Animations
 **Definition:** CSS3 Animations replace animated images, scripts, and flash animations. Done using key-frames.
+
 **@keyframes rule:** Defines the set of keyframes making up an animation sequence. Controls the intermediate steps.
+
 **Defining Keyframes:** Define styles for the start and end using `from`/`to` keywords or percentage values (0% for start, 100% for complete).
 
 ##### Animation sub-properties
@@ -298,6 +360,7 @@ css-property: value;
 | **animation-timing-function**| Controls the pace/speed of the animation. Possible values: linear, ease-in, ease-out, ease, etc. |
 | **animation-iteration-count**| Sets the number of times the animation should repeat (use `infinite` to repeat indefinitely). |
 | **animation** | Shorthand property for all other four properties. Example: `animation: name duration timing-function delay iteration-count direction;` |
+
 **Best Practice:**
 * Favor CSS Animations over JavaScript animations as the browser's rendering engine can optimize CSS animations more efficiently (e.g., frame skipping).
 
@@ -305,31 +368,38 @@ css-property: value;
 
 #### What is Responsive Web Design? (RWD)
 **Definition:** An approach of designing web applications to make them render well on devices with different sizes.
+
 **Mechanism:** Screen elements and contents automatically change size and reshuffle positions according to the available screen size.
 
 #### The Viewport
 **Definition:** The user's visible area of the web page. Varies based on screen size.
+
 **Setting the viewport:** Include the following meta tag for responsiveness:
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
+
 **Notes:**
 * `width` can be set to a specific pixel value or `device-width`. `initial-scale` is the initial zoom level.
 
 #### Media Queries
 **Definition:** Used to specify how the web page should look on different screen sizes.
+
 **Mechanism:** Use the `@media` rule to apply styles based on media type or media features of the device. Helps adjust position, button size, font size, margins, and paddings for smaller screens.
+
 **Syntax:**
 ```css
 @media not only mediatype and (expressions){
 css-code
 }
 ```
+
 **Components:**
 * **media type:** Screen type being rendered. (Values: `All`, `Print`, `Screen`, `Speech`).
 * **expressions:** Specifications like `min-height`, `max-width`, `max-resolution`, etc. Must resolve to true or false.
 * **Operators:** `not` or `only` (optional). `not` negates the query; `only` prevents old browsers from applying the style.
 * **CSS Code:** Styling applied if the query is true and media type matches.
+
 **Notes:**
 * Can target devices using `min-width` or `orientation` (portrait/landscape).
 * When using multiple queries, default styles apply to all devices, and specific styles apply only when max-width/min-width criteria are met.
@@ -342,40 +412,51 @@ css-code
 
 ##### 1. Absolute Units
 **Definition:** Units that do not depend on the viewport. They remain the same in all screen dimensions.
+
 **Units:** Centimeter (Cm), Inch (In), Millimeter (Mm), **Pixel (Px)**.
+
 **Notes:**
 * Pixels are the most widely used due to crystal-clear control and accuracy on a computer screen.
 
 ##### 2. Relative Units
 **Definition:** Units that depend on the viewport size or properties of the parent element. They change size relatively with respect to changes in other elements.
+
 **Units:** percent, vw/vh, em, rem.
 
 ###### Relative Units - percent (%)
 **Definition:** Styles the element in terms of percentage of the viewport size.
+
 **Notes (No Parent):**
 * Percentage is relative to the viewport size.
+
 **Notes (With Parent):**
 * Percentage value is based on the parent element's attribute (e.g., width 50% of parent's width).
 
 ###### Relative Units - VW and VH Units
 **Definition:** Provide dimension for elements relative to the width (`vw`) and height (`vh`) of the viewport.
+
 **Notes:**
 * `vw` and `vh` DO NOT consider padding and margins while computing width/height relative to the viewport size, whereas percentage units DO consider padding and margins.
 
 ###### Relative Units - EM Units
 **Definition:** Styles the element relative to the font-size of the **parent element** (for typographical properties). Else, relative to its font-size (for other properties).
+
 **Notes:**
 * Font size changes relatively with the parent element's font-size. When nesting elements, the size keeps multiplying (e.g., 2em inside 1.5em parent results in 3 times the original font size).
 
 ###### Relative Units - REM Units
 **Definition:** Styles the element relative to the font-size of the **root element** (`<html>`). Works otherwise like `em` units.
+
 **Notes:**
 * Font size is obtained from the root element, not the parent element. This prevents the size from multiplying when nesting elements.
 
 #### CSS Calc() Function
 **Definition:** Used in CSS to perform simple mathematical calculations while specifying values for CSS properties (length, percentage, number, etc.).
+
 **Usage:** Served as the value for a suitable CSS property that supports numbers.
+
 **Example:** `width: calc(20px + 30px)`
+
 **Notes:**
 * Supports mixing of units (e.g., percent + pixel).
 * When using `*`, at least one argument should be a number (E.g., `100px*2`).
@@ -387,48 +468,64 @@ css-code
 
 #### Step 1 - Ordering the flex elements
 **Properties of flex elements:** `order`, `flex-basis`, `flex-grow`, `flex-shrink`.
+
 **order property:** Changes the order of rendering flex elements. Takes a number value.
+
 **Notes:**
 * When `order` is used, it is mandatory to provide the `order` property for all flex items; otherwise, it will not work as expected.
 
 #### Step 2 - flex-basis property for a flex item
 **Definition:** Defines the customized size for a flex item.
+
 **Observation:** If content exceeds the set `flex-basis`, the content wraps to the next line.
+
 **Direction Dependency:** If `flex-direction` is `row`, `flex-basis` controls the **width**. If `flex-direction` is `column`, `flex-basis` controls the **height**.
 
 #### Step 3 - flex-grow property for a flex item
 **Definition:** Defines the expansion rate of a flex item in the remaining or available space.
+
 **Notes:**
 * `flex-grow` increases the size along the main axis. This differs from `flex-basis`, which fixes the size.
 
 #### Step 4 - flex-shrink property for a flex item
 **Definition:** Used to shrink a flex item when its size is larger than the flex container, accommodating all items within the container.
+
 **Scenario:** This situation occurs only when flex-item size is greater than the flex-container AND `flex-shrink` property is set to 0.
+
 **Solution:** Use a positive value (not 0) for `flex-shrink` to overcome scenarios where items spill out of the container.
+
 **Notes:**
 * Once the element reaches maximum shrinkage, increasing the value beyond that point (e.g., beyond 4) gives the same output.
 
 #### Shorthand properties for a Flexbox
 * **1. flex-flow:**
+    
     **Definition:** Combination of `flex-direction` and `flex-wrap`.
+    
     **Example:** `flex-flow: row wrap`
+    
     **Default:** `row` and `nowrap`.
 * **2. flex:**
+
     **Definition:** Combination of `flex-basis`, `flex-grow`, and `flex-shrink`.
+    
     **Example:** `flex: 2 1 100px` (`flex-grow` 2, `flex-shrink` 1, `flex-basis` 100px).
 
 ### Flexbox Container Properties
 
 #### Introduction to Flexbox
 **Definition:** A widely used CSS property to align elements within the available HTML space.
+
 **Characteristics:** One-dimensional layout structure. Dynamically aligns items by maintaining proper spaces. Supports expansion and shrinkage.
 
 #### Flex Container and its Properties
 **Definition:** The container within which flex elements are aligned. It alters the elements within, but not other elements.
+
 **Properties:** `display`, `flex-direction`, `flex-wrap`.
 
 #### Step 1 - Creating flex Container
 **Mechanism:** Must be created using the `display` property.
+
 **`display` property values:**
 * **1. flex:** Container spreads over the whole page (block level element).
 * **2. inline-flex:** Container spreads until all elements are covered (inline element).
@@ -437,7 +534,9 @@ css-code
 
 #### Step 2 - Providing direction to the flex container
 **Axes:** Main-axis and cross-axis.
+
 **Property:** `flex-direction`.
+
 **Values:**
 * **1. row (default):** Items aligned horizontally (A, B, C). Main-axis: horizontal; Cross-axis: vertical.
 * **2. row-reverse:** Items aligned horizontally in reverse order (C, B, A).
@@ -446,6 +545,7 @@ css-code
 
 #### Step 3 - Wrapping the flex elements
 **Property:** `flex-wrap`.
+
 **Values:**
 * **1. nowrap (default):** Wrapping is not applied; items remain on one line (shrinking if necessary).
 * **2. wrap:** Wrapping applied; elements move to the next line once maximum screen width is reached.
@@ -453,25 +553,34 @@ css-code
 
 #### Properties of Flexbox (Alignment)
 * **1. align-items:**
+    
     **Definition:** Aligns flex items vertically (along the cross-axis).
+    
     **Values:** `flex-start`, `flex-end`, `stretch` (content not found in source), `center`.
+
 * **2. justify-content:**
+    
     **Definition:** Aligns flex items horizontally (along the main-axis).
+    
     **Values:** `flex-start`, `flex-end`, `stretch` (content not found in source), `center`.
 
 ### CSS Grid
 
 #### CSS Grid
 **Definition:** The latest method for creating layouts, allowing for 2D structure (rows and columns).
+
 **Declaration:** Use `display: grid` on a container element.
 
 #### Specifying Columns and Rows
 **Properties:** `grid-template-rows` and `grid-template-columns`.
+
 **Unit 'fr':** Fraction unit. `1fr` occupies one fraction of the available space.
 
 #### Positioning Items (Spanning)
 **Parameters:** `grid-row` and `grid-column`.
+
 **Syntax (Spanning):** `grid-column: start / end`
+
 **Mechanism:** Elements are positioned using grid line numbers.
 
 #### Key properties of CSS Grid
@@ -484,23 +593,32 @@ css-code
 
 #### CSS Grid vs Flex
 **Dimensionality:** Flex is one dimensional; Grid is 2D.
+
 **Element Space:** Flex wrap allows elements to span multiple columns to fill space. Grid elements occupy only one column by default.
+
 **Width Definition:** In Flex, using explicit `width` values defeats the purpose of distribution. In Grid, we can define width for each column.
 
 ### CSS Variables (Custom Properties)
 
 #### Variables in CSS
 **Definition:** Custom properties used to change the appearance of the webpage, referred to as CSS variables.
+
 **Benefit:** Simplifies maintenance and updates by modifying a value only once.
 
 #### How to use Custom properties or the variables?
 * **1. Declaring a variable:**
-    **Syntax:** Must start with `--` followed by the property name. E.g., `--text-color: brown;`
+    
+**Syntax:** Must start with `--` followed by the property name. E.g., `--text-color: brown;`
 * **2. Using the declared variable:**
+    
     **Function:** Used with the `var()` function. E.g., `color: var(--text-color);`
+    
     **Scope (Selector):** When declared within a specific selector, the scope is restricted to that selector. If used outside, the styling is not applied.
+    
     **Scope (Document):** Declaring the variable under the root element (`:root{...}`) makes the variable available for usage anywhere in the document.
+    
     **`var()` parameters:** Takes two parameters. The first (declared variable) is mandatory. The second is optional, used as a fallback if the first parameter is invalid or unset.
+
 **Notes:**
 * CSS variables are case sensitive.
 
@@ -508,6 +626,7 @@ css-code
 
 #### Pseudo-classes
 **Definition:** A keyword added to a selector defining a special state of selected elements (e.g., focus, hover).
+
 **Syntax:** `selector: pseudo-class { css-property: value; }`
 
 ##### Link and Input related Pseudo classes
@@ -521,12 +640,15 @@ css-code
 | `:enabled` | Styles the state of element that is enabled and associated with input field. |
 | `:required` | Styles the input element with required attribute. |
 | `:checked` | Styles the state of element when it is selected. |
+
 **Notes:**
 * `a:hover` styles must be defined after `a:link` and `a:visited` in the CSS style definition. Pseudo-classes can be used with HTML elements other than links/inputs.
 
 #### Pseudo Elements
 **Definition:** A keyword added to a selector to design a specific part of selected elements (e.g., placeholder, first line). Used to add content before/after text.
+
 **Notation:** Denoted by double colons (`::`).
+
 **Syntax:** `selector::pseudo-element{ property: value; }`
 | Pseudo-element | Description |
 | :--- | :--- |
@@ -540,21 +662,27 @@ css-code
 
 #### Need for Accessibility
 **Context:** Web pages must be accessible to users with visual disabilities (e.g., color blindness, permanent visual loss) who use screen reader tools.
+
 **WCAG2.0 Luminosity Ratio:** 4.5:1 for normal text, 3:1 for large text.
 
 #### Hiding Content
 **Styles to avoid for hidden content accessed by screen readers:** `Display: none;` / `visibility: hidden;`. These remove content from the visual flow and skip screen readers.
+
 **Accessible Method:** Absolutely positioning content off screen (`left: -10000px; height: 1px; width: 1px; overflow: hidden;`).
+
 **Notes:**
 * Links and form elements should not be hidden using this method as sighted keyboard users rely on focus indication.
 
 #### Skip Links
 **Definition:** Internal page links to navigate around repetitive content. Mainly used by screen reader users.
+
 **Best Practice:** Skip links should be first in the source code, followed by main content, then navigation.
+
 **Accessibility Enhancement:** Hide the link until the user tabs to it (`a:focus` pseudo class changes position from `absolute` off-screen to `static` on-screen).
 
 #### Keyboard Accessibility
 **Requirement:** Web page must be operable using just the keyboard.
+
 **WCAG Guidelines:**
 * **1. Obvious keyboard focus:** Redesign focus highlight if browser default blends with site background.
 * **2. Make all interactive elements accessible:** Use `tabindex` to ensure access via keyboard (forms, buttons, etc.).
@@ -573,16 +701,20 @@ css-code
 
 #### Images
 **Requirement:** Use alternative text (`alt` attribute) on images.
+
 **Reasons:**
 * When content is not obvious, or when image fails to render (slow connectivity, `src` error), or for screen reader users.
 
 #### Heading Tags
 **Usage:** Use headings (`<h1>` to `<h6>`) to show document structure and relationships between sections. Do not use them purely for styling (Bold/Big text).
+
 **Importance:** Crucial for screen reader navigation.
 
 #### Time Element
 **HTML Element:** `<time>`
+
 **Definition:** Represents a machine-readable date and time.
+
 **`datetime` attribute:** States a standardized version of time for assistive devices, avoiding human confusion.
 
 #### Emphasized Texts
@@ -613,9 +745,12 @@ css-code
 
 #### Backward Compatibility
 **Definition:** Process of making content render similarly even in older browsers where certain properties are unsupported.
+
 **Fixing Compatible Issues:** Achieved by using values that the older browser supports.
+
 **Example:** Use `display: ms-flexbox` along with `display: flex` for IE9 compatibility.
 
 #### Polyfills
 **Definition:** Simple JavaScript code snippets that provide the latest available functionalities (e.g., Canvas element, text-shadow) to older browser platforms that do not support them natively.
+
 **Mechanism:** Fills the loopholes and gaps in the browser to ensure features work properly.
