@@ -10,186 +10,186 @@ Here’s the **definitive MongoDB learning index (Basics to Advanced)** 👇
 
 ### 🟩 1. MongoDB Fundamentals
 
-1.1 What is MongoDB and its features
-1.2 NoSQL vs SQL databases
-1.3 MongoDB architecture overview
-1.4 Documents, Collections, and Databases
-1.5 BSON format
-1.6 Installing MongoDB (Local & Cloud – Atlas)
-1.7 Mongo Shell & Compass overview
-1.8 Connecting MongoDB with Node.js using Mongoose
+- 1.1 What is MongoDB and its features
+- 1.2 NoSQL vs SQL databases
+- 1.3 MongoDB architecture overview
+- 1.4 Documents, Collections, and Databases
+- 1.5 BSON format
+- 1.6 Installing MongoDB (Local & Cloud – Atlas)
+- 1.7 Mongo Shell & Compass overview
+- 1.8 Connecting MongoDB with Node.js using Mongoose
 
 ---
 
 ### 🟩 2. CRUD Operations (Core)
 
-2.1 `insertOne()` and `insertMany()`
-2.2 `find()` – querying documents
-2.3 Query operators (`$eq`, `$ne`, `$gt`, `$lt`, `$in`, `$nin`)
-2.4 `updateOne()`, `updateMany()`, and `$set`, `$inc`, `$push`, `$pull`
-2.5 `replaceOne()`
-2.6 `deleteOne()` and `deleteMany()`
-2.7 Projection (select specific fields)
-2.8 Sorting and Limiting results
-2.9 `countDocuments()` and `estimatedDocumentCount()`
+- 2.1 `insertOne()` and `insertMany()`
+- 2.2 `find()` – querying documents
+- 2.3 Query operators (`$eq`, `$ne`, `$gt`, `$lt`, `$in`, `$nin`)
+- 2.4 `updateOne()`, `updateMany()`, and `$set`, `$inc`, `$push`, `$pull`
+- 2.5 `replaceOne()`
+- 2.6 `deleteOne()` and `deleteMany()`
+- 2.7 Projection (select specific fields)
+- 2.8 Sorting and Limiting results
+- 2.9 `countDocuments()` and `estimatedDocumentCount()`
 
 ---
 
 ### 🟩 3. Schema Design & Data Modeling
 
-3.1 Collections vs Tables
-3.2 Embedded documents vs References
-3.3 One-to-One, One-to-Many, Many-to-Many relationships
-3.4 Schema validation rules
-3.5 Designing efficient schemas for queries
-3.6 Data normalization vs denormalization
+- 3.1 Collections vs Tables
+- 3.2 Embedded documents vs References
+- 3.3 One-to-One, One-to-Many, Many-to-Many relationships
+- 3.4 Schema validation rules
+- 3.5 Designing efficient schemas for queries
+- 3.6 Data normalization vs denormalization
 
 ---
 
 ### 🟩 4. Mongoose ODM (Integration with Node.js)
 
-4.1 What is Mongoose & why use it
-4.2 Connecting to MongoDB with Mongoose
-4.3 Defining schemas and models
-4.4 Data validation in schemas
-4.5 CRUD operations using Mongoose
-4.6 Middleware (pre & post hooks)
-4.7 Schema methods and statics
-4.8 Virtuals and getters/setters
-4.9 Populating references (`populate()`)
-4.10 Indexing and performance in Mongoose
+- 4.1 What is Mongoose & why use it
+- 4.2 Connecting to MongoDB with Mongoose
+- 4.3 Defining schemas and models
+- 4.4 Data validation in schemas
+- 4.5 CRUD operations using Mongoose
+- 4.6 Middleware (pre & post hooks)
+- 4.7 Schema methods and statics
+- 4.8 Virtuals and getters/setters
+- 4.9 Populating references (`populate()`)
+- 4.10 Indexing and performance in Mongoose
 
 ---
 
 ### 🟩 5. Querying in Depth
 
-5.1 Comparison operators (`$eq`, `$gt`, `$lte`, etc.)
-5.2 Logical operators (`$and`, `$or`, `$not`, `$nor`)
-5.3 Element operators (`$exists`, `$type`)
-5.4 Evaluation operators (`$regex`, `$expr`, `$mod`)
-5.5 Array operators (`$all`, `$elemMatch`, `$size`)
-5.6 Cursor methods (`forEach`, `toArray`)
-5.7 Text search and `$text` operator
-5.8 Querying embedded documents
+- 5.1 Comparison operators (`$eq`, `$gt`, `$lte`, etc.)
+- 5.2 Logical operators (`$and`, `$or`, `$not`, `$nor`)
+- 5.3 Element operators (`$exists`, `$type`)
+- 5.4 Evaluation operators (`$regex`, `$expr`, `$mod`)
+- 5.5 Array operators (`$all`, `$elemMatch`, `$size`)
+- 5.6 Cursor methods (`forEach`, `toArray`)
+- 5.7 Text search and `$text` operator
+- 5.8 Querying embedded documents
 
 ---
 
 ### 🟩 6. Indexing (Performance Optimization)
 
-6.1 What is an index
-6.2 Default `_id` index
-6.3 Single field index
-6.4 Compound index
-6.5 Multikey index (for arrays)
-6.6 Text index
-6.7 Hashed index
-6.8 Wildcard index
-6.9 Index properties (`unique`, `sparse`, `partial`)
-6.10 Viewing and analyzing indexes (`explain()`)
-6.11 Performance impact of indexes
-6.12 Creating and dropping indexes
-6.13 Covered queries and query planner
-6.14 Mongoose indexing (`schema.index()`)
+- 6.1 What is an index
+- 6.2 Default `_id` index
+- 6.3 Single field index
+- 6.4 Compound index
+- 6.5 Multikey index (for arrays)
+- 6.6 Text index
+- 6.7 Hashed index
+- 6.8 Wildcard index
+- 6.9 Index properties (`unique`, `sparse`, `partial`)
+- 6.10 Viewing and analyzing indexes (`explain()`)
+- 6.11 Performance impact of indexes
+- 6.12 Creating and dropping indexes
+- 6.13 Covered queries and query planner
+- 6.14 Mongoose indexing (`schema.index()`)
 
 ---
 
 ### 🟩 7. Aggregation Framework
 
-7.1 What is aggregation
-7.2 `aggregate()` pipeline syntax
-7.3 Stages: `$match`, `$group`, `$project`, `$sort`, `$limit`, `$unwind`
-7.4 `$lookup` (joins)
-7.5 `$addFields`, `$set`, `$unset`
-7.6 `$out` and `$merge`
-7.7 `$count`, `$sum`, `$avg`, `$min`, `$max`
-7.8 `$facet`, `$bucket`, `$bucketAuto`
-7.9 Expressions and operators in pipelines
-7.10 Performance optimization in aggregation
+- 7.1 What is aggregation
+- 7.2 `aggregate()` pipeline syntax
+- 7.3 Stages: `$match`, `$group`, `$project`, `$sort`, `$limit`, `$unwind`
+- 7.4 `$lookup` (joins)
+- 7.5 `$addFields`, `$set`, `$unset`
+- 7.6 `$out` and `$merge`
+- 7.7 `$count`, `$sum`, `$avg`, `$min`, `$max`
+- 7.8 `$facet`, `$bucket`, `$bucketAuto`
+- 7.9 Expressions and operators in pipelines
+- 7.10 Performance optimization in aggregation
 
 ---
 
 ### 🟩 8. Transactions & Atomic Operations
 
-8.1 What are transactions
-8.2 ACID properties in MongoDB
-8.3 Single-document atomicity
-8.4 Multi-document transactions (Replica set requirement)
-8.5 Session handling in transactions
-8.6 Commit and abort operations
-8.7 Error handling in transactions
+- 8.1 What are transactions
+- 8.2 ACID properties in MongoDB
+- 8.3 Single-document atomicity
+- 8.4 Multi-document transactions (Replica set requirement)
+- 8.5 Session handling in transactions
+- 8.6 Commit and abort operations
+- 8.7 Error handling in transactions
 
 ---
 
 ### 🟩 9. Security & Authentication
 
-9.1 Users and roles
-9.2 Role-based access control (RBAC)
-9.3 Enabling authentication
-9.4 Database permissions and roles
-9.5 Encryption (in-transit & at-rest)
-9.6 Data backup and restore
-9.7 Network and firewall configuration
+- 9.1 Users and roles
+- 9.2 Role-based access control (RBAC)
+- 9.3 Enabling authentication
+- 9.4 Database permissions and roles
+- 9.5 Encryption (in-transit & at-rest)
+- 9.6 Data backup and restore
+- 9.7 Network and firewall configuration
 
 ---
 
 ### 🟩 10. MongoDB Atlas (Cloud)
 
-10.1 Creating an Atlas cluster
-10.2 Connecting with Node.js
-10.3 Using environment variables for credentials
-10.4 Importing/exporting data in Atlas
-10.5 Monitoring and performance tools
-10.6 Backups and snapshots
+- 10.1 Creating an Atlas cluster
+- 10.2 Connecting with Node.js
+- 10.3 Using environment variables for credentials
+- 10.4 Importing/exporting data in Atlas
+- 10.5 Monitoring and performance tools
+- 10.6 Backups and snapshots
 
 ---
 
 ### 🟩 11. MongoDB Utilities & Tools
 
-11.1 `mongosh` commands
-11.2 `mongodump` and `mongorestore`
-11.3 `mongoimport` and `mongoexport`
-11.4 Compass GUI tool usage
-11.5 Profiling queries (`db.setProfilingLevel`)
-11.6 Using `explain()` for optimization
+- 11.1 `mongosh` commands
+- 11.2 `mongodump` and `mongorestore`
+- 11.3 `mongoimport` and `mongoexport`
+- 11.4 Compass GUI tool usage
+- 11.5 Profiling queries (`db.setProfilingLevel`)
+- 11.6 Using `explain()` for optimization
 
 ---
 
 ### 🟩 12. Advanced Topics
 
-12.1 Sharding and Partitioning
-12.2 Replica Sets and High Availability
-12.3 Read/Write concerns
-12.4 Write acknowledgement levels
-12.5 Capped collections
-12.6 Time-to-live (TTL) indexes
-12.7 GridFS for large files
-12.8 Change streams (real-time updates)
-12.9 Data versioning and migration
+- 12.1 Sharding and Partitioning
+- 12.2 Replica Sets and High Availability
+- 12.3 Read/Write concerns
+- 12.4 Write acknowledgement levels
+- 12.5 Capped collections
+- 12.6 Time-to-live (TTL) indexes
+- 12.7 GridFS for large files
+- 12.8 Change streams (real-time updates)
+- 12.9 Data versioning and migration
 
 ---
 
 ### 🟩 13. Real-World Integration
 
-13.1 Building REST APIs with Node.js + Express + MongoDB
-13.2 CRUD using Mongoose in Express routes
-13.3 Pagination and filtering
-13.4 Authentication (JWT + MongoDB)
-13.5 Handling validation errors
-13.6 File uploads (GridFS or AWS S3)
-13.7 Deployment with MongoDB Atlas
-13.8 Testing with Jest/Mocha and MongoDB Memory Server
+- 13.1 Building REST APIs with Node.js + Express + MongoDB
+- 13.2 CRUD using Mongoose in Express routes
+- 13.3 Pagination and filtering
+- 13.4 Authentication (JWT + MongoDB)
+- 13.5 Handling validation errors
+- 13.6 File uploads (GridFS or AWS S3)
+- 13.7 Deployment with MongoDB Atlas
+- 13.8 Testing with Jest/Mocha and MongoDB Memory Server
 
 ---
 
 ### 🟩 14. Interview & Certification Preparation
 
-14.1 Top MongoDB commands
-14.2 Common interview questions (beginner → advanced)
-14.3 Performance tuning checklist
-14.4 Schema design best practices
-14.5 Index optimization case studies
-14.6 Aggregation pipeline scenarios
-14.7 Mock certification test
+- 14.1 Top MongoDB commands
+- 14.2 Common interview questions (beginner → advanced)
+- 14.3 Performance tuning checklist
+- 14.4 Schema design best practices
+- 14.5 Index optimization case studies
+- 14.6 Aggregation pipeline scenarios
+- 14.7 Mock certification test
 
 ---
 
