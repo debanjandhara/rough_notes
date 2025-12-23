@@ -1,4 +1,4 @@
-## 1. First: Overall Judgment (Honest & Fair)
+# 1. First: Overall Judgment (Honest & Fair)
 
 **Score (as-is): 7.8 / 10**
 
@@ -20,7 +20,7 @@ Winning articles make readers **pause**.
 
 ---
 
-## 2. Where Readers Will Get Frustrated or Drop Off
+# 2. Where Readers Will Get Frustrated or Drop Off
 
 ### Drop-off Point #1: After Lesson 1 (≈ 30–40%)
 
@@ -95,7 +95,7 @@ Now it earns its place.
 
 ---
 
-## 3. Why Would Someone Even Click This Article?
+# 3. Why Would Someone Even Click This Article?
 
 Right now, your title promises:
 
@@ -120,7 +120,7 @@ Winning articles lean into **curiosity + empowerment**.
 
 ---
 
-## 4. How to Optimize This Article into **5 Different Types**
+# 4. How to Optimize This Article into **5 Different Types**
 
 Same core content.
 Different *angles*, *hooks*, and *reader personas*.
@@ -271,7 +271,7 @@ Emotional push + belief shift.
 
 ---
 
-## 5. One High-Impact Improvement You Should Definitely Do
+# 5. One High-Impact Improvement You Should Definitely Do
 
 ### Rewrite the Title (Critical)
 
@@ -291,7 +291,7 @@ Content decides claps.
 
 ---
 
-## Final Judge Verdict
+# Final Judge Verdict
 
 You’re not missing skill.
 You’re missing **sharp positioning**.
